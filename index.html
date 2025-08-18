@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stitching Hope</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #fff8f0; /* cozy cream */
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    /* Cozy Fire Gradient */
+    .gradient {
+      background: linear-gradient(90deg, #6a4c93, #d45079, #ff7b54, #fcbf49);
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 0.8rem;
+      display: flex;
+      justify-content: center;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1.2rem;
+      font-weight: 600;
+      transition: opacity 0.3s;
+    }
+    nav a:hover {
+      opacity: 0.8;
+    }
+
+    /* Header */
+    header {
+      color: white;
+      text-align: center;
+      padding: 6rem 1rem 3rem;
+      margin-top: 2.8rem; /* push under navbar */
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    /* Section Styling */
+    section {
+      padding: 3rem 1.5rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #b23a48; /* warm red */
+      margin-bottom: 1rem;
+    }
+    .partners {
+      background: #fff0e6; /* soft peach background */
+      text-align: center;
+      padding: 3rem 1.5rem;
+      border-radius: 12px;
+    }
+
+    /* Board Grid */
+    .board {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .board-member {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .board-member:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Button */
+    a.button {
+      display: inline-block;
+      background: #ff7b54; /* warm orange */
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border-radius: 25px;
+      text-decoration: none;
+      margin-top: 1rem;
+      transition: background 0.3s;
+    }
+    a.button:hover {
+      background: #d45079; /* warm red hover */
+    }
+
+    /* Footer */
+    footer {
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="gradient">
+    <a href="#home">Home</a>
+    <a href="#mission">Mission</a>
+    <a href="#organizations">Organizations</a>
+    <a href="#board">Meet the Board</a>
+  </nav>
+
+  <!-- Home Section -->
+  <header id="home" class="gradient">
+    <h1>Stitching Hope</h1>
+    <p>Connecting Senior Living Centers & Homeless Shelters Through Crochet & Kindness</p>
+  </header>
+
+  <!-- Mission Section -->
+  <section id="mission">
+    <h2>Our Mission</h2>
+    <p>
+      We are a charitable organization bringing together two communities to mutually benefit: 
+      senior living centers and homeless shelters. Through crocheting and knitting events, 
+      we aim to foster connection, purpose, and generosity — donating handmade blankets, hats, 
+      and socks to those in need.
+    </p>
+  </section>
+
+  <!-- Organizations Section -->
+  <section id="organizations" class="partners">
+    <h2>Partner Organizations</h2>
+    <p>
+      Currently, we are partnering with senior living centers that already have crochet or knitting 
+      groups in place. If you would like to partner with us, please reach out! Together, we can 
+      expand our community impact.
+    </p>
+    <!-- Example logos (replace later) -->
+    <div style="margin-top:2rem;">
+      <img src="https://via.placeholder.com/150/ff7b54/ffffff?text=Org+1" alt="Partner Logo" style="margin: 0 1rem; border-radius:8px;">
+      <img src="https://via.placeholder.com/150/d45079/ffffff?text=Org+2" alt="Partner Logo" style="margin: 0 1rem; border-radius:8px;">
+    </div>
+    <a href="mailto:stitchinghope@email.com" class="button">Become a Partner</a>
+  </section>
+
+  <!-- Meet the Board Section -->
+  <section id="board">
+    <h2>Meet the Board</h2>
+    <div class="board">
+      <div class="board-member">
+        <h3>Board Member 1</h3>
+        <p>Role / Short bio here</p>
+      </div>
+      <div class="board-member">
+        <h3>Board Member 2</h3>
+        <p>Role / Short bio here</p>
+      </div>
+      <div class="board-member">
+        <h3>Board Member 3</h3>
+        <p>Role / Short bio here</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="gradient">
+    <p>© 2025 Stitching Hope | Built with ❤️</p>
+  </footer>
+</body>
+</html>
