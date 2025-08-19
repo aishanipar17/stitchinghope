@@ -4,52 +4,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stitching Hope</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
+      font-family: 'Roboto', sans-serif;
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif; /* Keep same fonts */
-      background: #fff8f0;
+      background-color: #fff8f0;
       color: #4b2e2e;
     }
+
     header {
-      background: linear-gradient(90deg, #ff7043, #ffca28, #ab47bc);
-      padding: 20px;
+      background: linear-gradient(135deg, #ff7043, #ffca28, #ab47bc);
+      color: white;
       text-align: center;
-      color: white;
+      padding: 40px 20px;
+      font-family: 'Courgette', cursive;
     }
-    nav {
-      display: flex;
-      justify-content: center;
-      background: #d84315;
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
     }
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding: 14px 20px;
+
+    header p {
+      font-size: 1.3rem;
+      margin-top: 10px;
+    }
+
+    header span {
       display: block;
-      transition: background 0.3s;
+      font-size: 1rem;
+      font-weight: 400;
+      margin-top: 10px;
+      opacity: 0.85;
+    }
+
+    nav {
+      background-color: #d84315;
+      overflow: hidden;
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
       font-weight: bold;
     }
+
     nav a:hover {
-      background: #bf360c;
+      background-color: #bf360c;
     }
+
     section {
-      padding: 40px;
+      padding: 50px 20px;
       text-align: center;
     }
+
     h2 {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 2rem;
+      font-family: 'Courgette', cursive;
       color: #d84315;
       margin-bottom: 20px;
     }
+
     p {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 1rem;
+      max-width: 800px;
+      margin: 0 auto 20px auto;
       line-height: 1.6;
-      max-width: 700px;
-      margin: 0 auto 20px;
     }
+
     .apply-btn {
       display: inline-block;
       margin-top: 20px;
@@ -60,40 +86,42 @@
       font-weight: bold;
       text-decoration: none;
       border-radius: 50px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      transition: 0.3s;
+      transition: transform 0.2s;
     }
+
     .apply-btn:hover {
       transform: scale(1.05);
     }
-    iframe {
-      border: none;
-      width: 100%;
-      max-width: 700px;
-      height: 1200px;
-    }
+
     footer {
-      background: #d84315;
+      background-color: #d84315;
       color: white;
       text-align: center;
-      padding: 15px;
-      margin-top: 40px;
-      font-size: 0.9rem;
+      padding: 20px;
+    }
+
+    footer span {
+      display: block;
+      font-family: 'Courgette', cursive;
+      font-size: 1.1rem;
+      margin-top: 5px;
+      opacity: 0.9;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Stitching Hope</h1>
-    <p>Bringing together senior living centers and homeless shelters through compassion and creativity.</p>
+    <p>Bringing warmth, joy, and purpose to our community</p>
+    <span>Built with love ❤️ for seniors and those in need</span>
   </header>
-  
+
   <nav>
     <a href="#home">Home</a>
     <a href="#mission">Mission</a>
     <a href="#organizations">Organizations</a>
     <a href="#board">Meet the Board</a>
-    <a href="#apply-chapter">Apply</a>
+    <a href="#apply">Apply</a>
   </nav>
 
   <section id="home">
@@ -116,22 +144,15 @@
     <p>Our dedicated board members are committed to building connections and improving lives through Stitching Hope.</p>
   </section>
 
-  <!-- Apply Section with Embedded Google Form -->
-  <section id="apply-chapter" style="background: #fff3e0;">
-    <h2>Start a Stitching Hope Chapter</h2>
-    <p>Interested in becoming a Chapter Founder? Fill out the form below to bring Stitching Hope to your community and make a difference.</p>
-    
-    <!-- Embedded Google Form -->
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLEdOslrTt2b8fLopNYXq7FO0nHXpQ2pB_O0dori_6rAh5pEcFWWvIb0Gpk4ek/viewform?embedded=true" 
-            frameborder="0" 
-            marginheight="0" 
-            marginwidth="0">
-      Loading…
-    </iframe>
+  <section id="apply">
+    <h2>Apply to Start a Chapter</h2>
+    <p>If you are interested in becoming a Chapter Founder, click the button below to fill out the application form:</p>
+    <a class="apply-btn" href="https://docs.google.com/forms/d/1Xq7FO0nHXpQ2pB_O0dori_6rAh5pEcFWWvIb0Gpk4ek/viewform?usp=sf_link" target="_blank">Apply</a>
   </section>
 
   <footer>
     <p>&copy; 2025 Stitching Hope. All rights reserved.</p>
+    <span>Built with love ❤️ for seniors and those in need</span>
   </footer>
 </body>
 </html>
