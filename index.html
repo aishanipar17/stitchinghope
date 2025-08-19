@@ -27,17 +27,27 @@
       top: 0;
       left: 0;
       width: 100%;
-      padding: 0.8rem;
+      padding: 0.8rem 1rem;
       display: flex;
       justify-content: center;
+      align-items: center;
+      gap: 1.2rem;
       z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     }
     nav a {
-      color: white;
       text-decoration: none;
-      margin: 0 1.2rem;
       font-weight: 600;
-      transition: opacity 0.3s;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      transition: background 0.3s, opacity 0.3s;
+    }
+    nav a.button {
+      background-color: #ff7b54;
+    }
+    nav a.button:hover {
+      background-color: #d45079;
     }
     nav a:hover {
       opacity: 0.8;
@@ -48,7 +58,7 @@
       color: white;
       text-align: center;
       padding: 6rem 1rem 3rem;
-      margin-top: 2.8rem; /* push under navbar */
+      margin-top: 3.8rem; /* push under navbar */
     }
     header h1 {
       margin: 0;
@@ -95,19 +105,15 @@
       transform: translateY(-5px);
     }
 
-    /* Button */
+    /* Buttons */
     a.button {
       display: inline-block;
-      background: #ff7b54; /* warm orange */
       color: white;
       padding: 0.7rem 1.5rem;
       border-radius: 25px;
       text-decoration: none;
       margin-top: 1rem;
       transition: background 0.3s;
-    }
-    a.button:hover {
-      background: #d45079; /* warm red hover */
     }
 
     /* Footer */
@@ -116,6 +122,15 @@
       text-align: center;
       padding: 1rem;
       margin-top: 2rem;
+    }
+
+    /* Chapter Section */
+    #chapter {
+      background: #fff8f0;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      border-radius: 12px;
+      margin-top: 1rem;
     }
   </style>
 </head>
@@ -126,8 +141,20 @@
     <a href="#mission">Mission</a>
     <a href="#organizations">Organizations</a>
     <a href="#board">Meet the Board</a>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLScwH5wASKWcrPu2acv8GhKCCmRY5cKZHHOlw7kgeMLpgIaTvg/viewform" class="button">Apply</a>
+    <a href="#chapter" class="button">Apply</a>
   </nav>
+
+  <!-- Start a Chapter Section -->
+  <section id="chapter">
+    <h2>Start a Chapter</h2>
+    <p>
+      Interested in starting a Stitching Hope chapter at your senior living center or community? 
+      We’re looking for passionate individuals or organizations with connections or experience 
+      with senior citizens who want to make a difference. Each chapter organizes crochet and 
+      knitting events, creating items to donate to local homeless shelters. 
+    </p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScwH5wASKWcrPu2acv8GhKCCmRY5cKZHHOlw7kgeMLpgIaTvg/viewform" class="button" target="_blank" rel="noopener noreferrer">Apply to Start a Chapter</a>
+  </section>
 
   <!-- Home Section -->
   <header id="home" class="gradient">
