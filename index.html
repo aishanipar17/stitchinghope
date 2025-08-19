@@ -1,158 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Stitching Hope</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       margin: 0;
-      background-color: #fff8f0;
-      color: #4b2e2e;
-    }
-
-    header {
-      background: linear-gradient(135deg, #ff7043, #ffca28, #ab47bc);
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-      font-family: 'Courgette', cursive;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      margin: 0;
-    }
-
-    header p {
-      font-size: 1.3rem;
-      margin-top: 10px;
-    }
-
-    header span {
-      display: block;
-      font-size: 1rem;
-      font-weight: 400;
-      margin-top: 10px;
-      opacity: 0.85;
-    }
-
-    nav {
-      background-color: #d84315;
-      overflow: hidden;
-    }
-
-    nav a {
-      float: left;
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 20px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      background-color: #bf360c;
-    }
-
-    section {
-      padding: 50px 20px;
-      text-align: center;
-    }
-
-    h2 {
-      font-family: 'Courgette', cursive;
-      color: #d84315;
-      margin-bottom: 20px;
-    }
-
-    p {
-      max-width: 800px;
-      margin: 0 auto 20px auto;
+      padding: 0;
       line-height: 1.6;
+      background-color: #fff8f0; /* cozy cream */
+      color: #333;
+      scroll-behavior: smooth;
     }
 
-    .apply-btn {
-      display: inline-block;
-      margin-top: 20px;
-      background: linear-gradient(45deg, #ff7043, #ffca28, #ab47bc);
+    /* Cozy Fire Gradient */
+    .gradient {
+      background: linear-gradient(90deg, #6a4c93, #d45079, #ff7b54, #fcbf49);
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 0.8rem;
+      display: flex;
+      justify-content: center;
+      z-index: 1000;
+    }
+    nav a {
       color: white;
-      padding: 15px 35px;
-      font-size: 1.2rem;
-      font-weight: bold;
       text-decoration: none;
-      border-radius: 50px;
+      margin: 0 1.2rem;
+      font-weight: 600;
+      transition: opacity 0.3s;
+    }
+    nav a:hover {
+      opacity: 0.8;
+    }
+
+    /* Header */
+    header {
+      color: white;
+      text-align: center;
+      padding: 6rem 1rem 3rem;
+      margin-top: 2.8rem; /* push under navbar */
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    /* Section Styling */
+    section {
+      padding: 3rem 1.5rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #b23a48; /* warm red */
+      margin-bottom: 1rem;
+    }
+    .partners {
+      background: #fff0e6; /* soft peach background */
+      text-align: center;
+      padding: 3rem 1.5rem;
+      border-radius: 12px;
+    }
+
+    /* Board Grid */
+    .board {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .board-member {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       transition: transform 0.2s;
     }
-
-    .apply-btn:hover {
-      transform: scale(1.05);
+    .board-member:hover {
+      transform: translateY(-5px);
     }
 
+    /* Button */
+    a.button {
+      display: inline-block;
+      background: #ff7b54; /* warm orange */
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border-radius: 25px;
+      text-decoration: none;
+      margin-top: 1rem;
+      transition: background 0.3s;
+    }
+    a.button:hover {
+      background: #d45079; /* warm red hover */
+    }
+
+    /* Footer */
     footer {
-      background-color: #d84315;
       color: white;
       text-align: center;
-      padding: 20px;
-    }
-
-    footer span {
-      display: block;
-      font-family: 'Courgette', cursive;
-      font-size: 1.1rem;
-      margin-top: 5px;
-      opacity: 0.9;
+      padding: 1rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Stitching Hope</h1>
-    <p>Bringing warmth, joy, and purpose to our community</p>
-    <span>Built with love ❤️ for seniors and those in need</span>
-  </header>
-
-  <nav>
+  <!-- Navbar -->
+  <nav class="gradient">
     <a href="#home">Home</a>
     <a href="#mission">Mission</a>
     <a href="#organizations">Organizations</a>
     <a href="#board">Meet the Board</a>
-    <a href="#apply">Apply</a>
   </nav>
 
-  <section id="home">
-    <h2>Welcome</h2>
-    <p>We’re very excited for this opportunity to partner with communities and bring joy, purpose, and warmth to those who need it most.</p>
-  </section>
+  <!-- Home Section -->
+  <header id="home" class="gradient">
+    <h1>Stitching Hope</h1>
+    <p>Connecting Senior Living Centers & Homeless Shelters Through Crochet & Kindness</p>
+  </header>
 
+  <!-- Mission Section -->
   <section id="mission">
     <h2>Our Mission</h2>
-    <p>We aim to connect senior citizens with local homeless shelters through crocheting and knitting events. This brings purpose, community, and compassion to our seniors while providing warmth to those in need.</p>
+    <p>
+      We are a charitable organization bringing together two communities to mutually benefit: 
+      senior living centers and homeless shelters. Through crocheting and knitting events, 
+      we aim to foster connection, purpose, and generosity — donating handmade blankets, hats, 
+      and socks to those in need.
+    </p>
   </section>
 
-  <section id="organizations">
-    <h2>Our Partner Organizations</h2>
-    <p>As we gain more partners, we will showcase them here to highlight the amazing contributions they are making in our community.</p>
+  <!-- Organizations Section -->
+  <section id="organizations" class="partners">
+    <h2>Partner Organizations</h2>
+    <p>
+      Currently, we are partnering with senior living centers that already have crochet or knitting 
+      groups in place. If you would like to partner with us, please reach out! Together, we can 
+      expand our community impact.
+    </p>
+    <!-- Example logos (replace later) -->
+    <div style="margin-top:2rem;">
+      <img src="https://via.placeholder.com/150/ff7b54/ffffff?text=Org+1" alt="Partner Logo" style="margin: 0 1rem; border-radius:8px;">
+      <img src="https://via.placeholder.com/150/d45079/ffffff?text=Org+2" alt="Partner Logo" style="margin: 0 1rem; border-radius:8px;">
+    </div>
+    <a href="mailto:stitchinghope@email.com" class="button">Become a Partner</a>
   </section>
 
+  <!-- Meet the Board Section -->
   <section id="board">
     <h2>Meet the Board</h2>
-    <p>Our dedicated board members are committed to building connections and improving lives through Stitching Hope.</p>
+    <div class="board">
+      <div class="board-member">
+        <h3>Board Member 1</h3>
+        <p>Role / Short bio here</p>
+      </div>
+      <div class="board-member">
+        <h3>Board Member 2</h3>
+        <p>Role / Short bio here</p>
+      </div>
+      <div class="board-member">
+        <h3>Board Member 3</h3>
+        <p>Role / Short bio here</p>
+      </div>
+    </div>
   </section>
 
-  <section id="apply">
-    <h2>Apply to Start a Chapter</h2>
-    <p>If you are interested in becoming a Chapter Founder, click the button below to fill out the application form:</p>
-    <a class="apply-btn" href="https://docs.google.com/forms/d/1Xq7FO0nHXpQ2pB_O0dori_6rAh5pEcFWWvIb0Gpk4ek/viewform?usp=sf_link" target="_blank">Apply</a>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Stitching Hope. All rights reserved.</p>
-    <span>Built with love ❤️ for seniors and those in need</span>
+  <!-- Footer -->
+  <footer class="gradient">
+    <p>© 2025 Stitching Hope | Built with ❤️</p>
   </footer>
 </body>
 </html>
