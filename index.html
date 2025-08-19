@@ -7,69 +7,52 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #fff8f0;
-      color: #333;
+      font-family: Arial, Helvetica, sans-serif; /* Keep same fonts */
+      background: #fff8f0;
+      color: #4b2e2e;
     }
-
-    /* Navbar */
-    nav {
-      background: linear-gradient(45deg, #ff7043, #ffca28, #ab47bc);
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    nav .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
+    header {
+      background: linear-gradient(90deg, #ff7043, #ffca28, #ab47bc);
+      padding: 20px;
+      text-align: center;
       color: white;
     }
-
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
+    nav {
       display: flex;
-      gap: 20px;
+      justify-content: center;
+      background: #d84315;
     }
-
-    nav ul li {
-      display: inline;
-    }
-
-    nav ul li a {
+    nav a {
       color: white;
       text-decoration: none;
+      padding: 14px 20px;
+      display: block;
+      transition: background 0.3s;
       font-weight: bold;
-      transition: color 0.3s;
     }
-
-    nav ul li a:hover {
-      color: #ffe082;
+    nav a:hover {
+      background: #bf360c;
     }
-
-    /* Sections */
     section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
+      padding: 40px;
+      text-align: center;
     }
-
-    h1, h2 {
+    h2 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 2rem;
       color: #d84315;
-      text-align: center;
+      margin-bottom: 20px;
     }
-
     p {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1rem;
       line-height: 1.6;
-      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
     }
-
-    /* Apply Button */
-    .apply-button {
+    .apply-btn {
       display: inline-block;
+      margin-top: 20px;
       background: linear-gradient(45deg, #ff7043, #ffca28, #ab47bc);
       color: white;
       padding: 15px 35px;
@@ -80,76 +63,75 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       transition: 0.3s;
     }
-
-    .apply-button:hover {
+    .apply-btn:hover {
       transform: scale(1.05);
+    }
+    iframe {
+      border: none;
+      width: 100%;
+      max-width: 700px;
+      height: 1200px;
+    }
+    footer {
+      background: #d84315;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-
-  <!-- Navbar -->
+  <header>
+    <h1>Stitching Hope</h1>
+    <p>Bringing together senior living centers and homeless shelters through compassion and creativity.</p>
+  </header>
+  
   <nav>
-    <div class="logo">Stitching Hope</div>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#mission">Mission</a></li>
-      <li><a href="#organizations">Organizations</a></li>
-      <li><a href="#board">Meet the Board</a></li>
-      <li><a href="#apply-chapter">Apply</a></li>
-    </ul>
+    <a href="#home">Home</a>
+    <a href="#mission">Mission</a>
+    <a href="#organizations">Organizations</a>
+    <a href="#board">Meet the Board</a>
+    <a href="#apply-chapter">Apply</a>
   </nav>
 
-  <!-- Home -->
   <section id="home">
-    <h1>Welcome to Stitching Hope</h1>
-    <p>
-      We connect senior living centers and homeless shelters through crocheting and knitting. 
-      Together, we build community, purpose, and hope.
-    </p>
+    <h2>Welcome</h2>
+    <p>We’re very excited for this opportunity to partner with communities and bring joy, purpose, and warmth to those who need it most.</p>
   </section>
 
-  <!-- Mission -->
   <section id="mission">
     <h2>Our Mission</h2>
-    <p>
-      Our mission is to unite two communities — senior citizens and the homeless — 
-      through the act of creating and donating handmade items such as blankets, hats, 
-      and socks. By fostering connection and purpose, we aim to leave our world better 
-      than we found it.
-    </p>
+    <p>We aim to connect senior citizens with local homeless shelters through crocheting and knitting events. This brings purpose, community, and compassion to our seniors while providing warmth to those in need.</p>
   </section>
 
-  <!-- Organizations -->
   <section id="organizations">
-    <h2>Partner Organizations</h2>
-    <p>
-      We are proud to partner with senior centers and homeless shelters in our community. 
-      As we grow, we will showcase our partners here.
-    </p>
+    <h2>Our Partner Organizations</h2>
+    <p>As we gain more partners, we will showcase them here to highlight the amazing contributions they are making in our community.</p>
   </section>
 
-  <!-- Meet the Board -->
   <section id="board">
     <h2>Meet the Board</h2>
-    <p>
-      Our dedicated board members lead Stitching Hope with compassion and commitment. 
-      (Board member bios coming soon!)
-    </p>
+    <p>Our dedicated board members are committed to building connections and improving lives through Stitching Hope.</p>
   </section>
 
-  <!-- Apply Section -->
-  <section id="apply-chapter" style="background: #fff3e0; border-radius: 16px; padding: 60px;">
+  <!-- Apply Section with Embedded Google Form -->
+  <section id="apply-chapter" style="background: #fff3e0;">
     <h2>Start a Stitching Hope Chapter</h2>
-    <p style="margin-bottom: 30px;">
-      Interested in becoming a Chapter Founder? Apply today to bring Stitching Hope to 
-      your community and make a difference.
-    </p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLScwH5wASKWcrPu2acv8GhKCCmRY5cKZHHOlw7kgeMLpgIaTvg/viewform?usp=preview" 
-       target="_blank" class="apply-button">
-       Apply to Be a Chapter Founder
-    </a>
+    <p>Interested in becoming a Chapter Founder? Fill out the form below to bring Stitching Hope to your community and make a difference.</p>
+    
+    <!-- Embedded Google Form -->
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLEdOslrTt2b8fLopNYXq7FO0nHXpQ2pB_O0dori_6rAh5pEcFWWvIb0Gpk4ek/viewform?embedded=true" 
+            frameborder="0" 
+            marginheight="0" 
+            marginwidth="0">
+      Loading…
+    </iframe>
   </section>
 
+  <footer>
+    <p>&copy; 2025 Stitching Hope. All rights reserved.</p>
+  </footer>
 </body>
 </html>
