@@ -1,155 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us - Stitching Hope</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
+      font-family: 'Montserrat', sans-serif;
       margin: 0;
-      font-family: 'Trebuchet MS', sans-serif;
-      background: linear-gradient(135deg, #FFB347, #FF6961, #FFD700, #8A2BE2);
-      background-size: 300% 300%;
-      animation: gradientShift 15s ease infinite;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #fff8f0;
       color: #333;
+      scroll-behavior: smooth;
     }
 
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    header {
-      text-align: center;
-      padding: 40px 20px;
-      color: white;
-    }
-
-    header h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.2em;
-    }
-
-    main {
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 0.8rem;
       display: flex;
       justify-content: center;
-      align-items: center;
-      padding: 60px 20px;
+      background: #6a4c93; /* cozy header color */
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1.2rem;
+      font-weight: 600;
+      transition: opacity 0.3s;
+    }
+    nav a:hover {
+      opacity: 0.8;
     }
 
-    .contact-container {
-      display: flex;
-      gap: 40px;
-      max-width: 1000px;
-      width: 100%;
-      background: white;
-      padding: 40px;
+    /* Page Header */
+    header {
+      text-align: center;
+      padding: 6rem 1rem 3rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      color: #6a4c93;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      color: #b23a48;
+    }
+
+    /* Contact Form Section */
+    section {
+      padding: 3rem 1.5rem;
+      max-width: 700px;
+      margin: auto;
+      background-color: #ffffff;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-
-    .contact-info, .contact-form {
-      flex: 1;
+    h2 {
+      color: #b23a48;
+      text-align: center;
+      margin-bottom: 1.5rem;
     }
-
-    .contact-info h2, .contact-form h2 {
-      margin-bottom: 20px;
-      color: #444;
-    }
-
-    .contact-info p {
-      margin: 10px 0;
-      font-size: 1.1em;
-    }
-
-    .contact-info a {
-      color: #FF6961;
-      text-decoration: none;
-    }
-
     form {
       display: flex;
       flex-direction: column;
+      gap: 1rem;
     }
-
-    form label {
-      margin-top: 15px;
-      font-weight: bold;
-      color: #555;
+    label {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
     }
-
-    form input, form textarea {
-      margin-top: 5px;
-      padding: 10px;
-      border-radius: 6px;
+    input, textarea {
+      padding: 0.7rem 1rem;
       border: 1px solid #ccc;
-      font-size: 1em;
-    }
-
-    form button {
-      margin-top: 20px;
-      padding: 12px;
-      border: none;
-      background: linear-gradient(135deg, #FFB347, #FF6961);
-      color: white;
-      font-size: 1.1em;
-      font-weight: bold;
       border-radius: 8px;
-      cursor: pointer;
-      transition: transform 0.2s ease;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
     }
-
-    form button:hover {
-      transform: scale(1.05);
+    textarea {
+      resize: vertical;
+      min-height: 120px;
     }
-
-    footer {
-      text-align: center;
-      padding: 20px;
+    button {
+      background: #ff7b54;
       color: white;
-      margin-top: 40px;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-top: 1rem;
+    }
+    button:hover {
+      background: #d45079;
+    }
+
+    /* Footer */
+    footer {
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      background: #6a4c93;
     }
   </style>
 </head>
 <body>
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Page Header -->
   <header>
-    <h1>Contact Stitching Hope</h1>
-    <p>We’d love to hear from you! Reach out with questions, ideas, or partnership requests.</p>
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you!</p>
   </header>
 
-  <main>
-    <div class="contact-container">
-      <div class="contact-info">
-        <h2>Our Information</h2>
-        <p>Email: <a href="mailto:stitchinghope.org@gmail.com">stitchinghope.org@gmail.com</a></p>
-        <p>Location: Basking Ridge, NJ</p>
-      </div>
+  <!-- Contact Form Section -->
+  <section>
+    <h2>Send Us a Message</h2>
+    <form action="mailto:stitchinghope.org@gmail.com" method="post" enctype="text/plain">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
 
-      <div class="contact-form">
-        <h2>Send Us a Message</h2>
-        <form>
-          <label for="name">Your Name</label>
-          <input type="text" id="name" name="name" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="stitchinghope.org@gmail.com" required>
 
-          <label for="email">Your Email</label>
-          <input type="email" id="email" name="email" required>
+      <label for="location">Location</label>
+      <input type="text" id="location" name="location" placeholder="Your City / State" required>
 
-          <label for="message">Your Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+      <label for="message">Message / Questions</label>
+      <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
 
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
-    </div>
-  </main>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
+  <!-- Footer -->
   <footer>
-    <p>Built with ❤️ by Stitching Hope</p>
+    <p>© 2025 Stitching Hope | Built with ❤️</p>
   </footer>
 </body>
 </html>
