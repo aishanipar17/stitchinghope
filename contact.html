@@ -10,28 +10,25 @@
       font-family: 'Montserrat', sans-serif;
       margin: 0;
       padding: 0;
-      line-height: 1.6;
-      background-color: #fff8f0;
+      background-color: #fff8f0; /* solid background */
       color: #333;
-      scroll-behavior: smooth;
     }
 
     /* Navbar */
     nav {
       position: fixed;
       top: 0;
-      left: 0;
       width: 100%;
-      padding: 0.8rem;
+      background-color: #6a4c93;
+      padding: 1rem 0;
       display: flex;
       justify-content: center;
-      background: #6a4c93; /* cozy header color */
       z-index: 1000;
     }
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 1.2rem;
+      margin: 0 1.5rem;
       font-weight: 600;
       transition: opacity 0.3s;
     }
@@ -39,10 +36,10 @@
       opacity: 0.8;
     }
 
-    /* Page Header */
+    /* Header */
     header {
       text-align: center;
-      padding: 6rem 1rem 3rem;
+      padding: 6rem 1rem 2rem;
     }
     header h1 {
       margin: 0;
@@ -51,44 +48,50 @@
     }
     header p {
       font-size: 1.2rem;
-      margin-top: 0.5rem;
       color: #b23a48;
+      margin-top: 0.5rem;
     }
 
-    /* Contact Form Section */
-    section {
-      padding: 3rem 1.5rem;
+    /* Form container */
+    .form-container {
       max-width: 700px;
-      margin: auto;
-      background-color: #ffffff;
+      background: #ffffff;
+      padding: 2.5rem;
+      margin: 2rem auto 4rem;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    h2 {
-      color: #b23a48;
+
+    .form-container h2 {
       text-align: center;
+      color: #b23a48;
       margin-bottom: 1.5rem;
     }
+
     form {
       display: flex;
       flex-direction: column;
       gap: 1rem;
     }
+
     label {
       font-weight: 600;
       margin-bottom: 0.3rem;
     }
+
     input, textarea {
       padding: 0.7rem 1rem;
-      border: 1px solid #ccc;
       border-radius: 8px;
+      border: 1px solid #ccc;
       font-family: 'Montserrat', sans-serif;
       font-size: 1rem;
     }
+
     textarea {
       resize: vertical;
       min-height: 120px;
     }
+
     button {
       background: #ff7b54;
       color: white;
@@ -101,6 +104,7 @@
       transition: background 0.3s;
       margin-top: 1rem;
     }
+
     button:hover {
       background: #d45079;
     }
@@ -110,7 +114,6 @@
       color: white;
       text-align: center;
       padding: 1rem;
-      margin-top: 2rem;
       background: #6a4c93;
     }
   </style>
@@ -123,14 +126,14 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <!-- Page Header -->
+  <!-- Header -->
   <header>
     <h1>Contact Us</h1>
     <p>We'd love to hear from you!</p>
   </header>
 
-  <!-- Contact Form Section -->
-  <section>
+  <!-- Form Section -->
+  <div class="form-container">
     <h2>Send Us a Message</h2>
     <form action="mailto:stitchinghope.org@gmail.com" method="post" enctype="text/plain">
       <label for="name">Name</label>
@@ -147,7 +150,7 @@
 
       <button type="submit">Send Message</button>
     </form>
-  </section>
+  </div>
 
   <!-- Footer -->
   <footer>
