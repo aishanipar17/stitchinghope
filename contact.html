@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Stitching Hope</title>
+  <title>Contact | Stitching Hope</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -56,51 +56,62 @@
       margin-top: 0.5rem;
     }
 
-    section {
-      padding: 3rem 1.5rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      color: #b23a48;
-      margin-bottom: 1rem;
+    main {
+      display: flex;
+      justify-content: center;
+      padding: 3rem 1rem;
     }
 
-    .form-container {
-      background-color: #fff8f0;
+    .contact-container {
+      background-color: white;
       padding: 2rem;
+      max-width: 600px;
+      width: 100%;
       border-radius: 12px;
-      max-width: 700px;
-      margin: auto;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
     }
-    .form-container label {
-      display: block;
-      margin-top: 1rem;
+
+    .contact-container h2 {
+      color: #b23a48;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-info {
+      margin-bottom: 2rem;
       font-weight: 600;
     }
-    .form-container input,
-    .form-container textarea {
+
+    .contact-container label {
+      display: block;
+      margin: 1rem 0 0.3rem;
+      font-weight: 600;
+      text-align: left;
+    }
+
+    .contact-container input,
+    .contact-container textarea {
       width: 100%;
       padding: 0.7rem;
-      margin-top: 0.3rem;
-      border: 1px solid #ccc;
       border-radius: 8px;
+      border: 1px solid #ccc;
       font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
     }
-    .form-container button {
+
+    .contact-container button {
       margin-top: 1.5rem;
-      padding: 0.8rem 1.5rem;
-      background: #ff7b54;
-      color: white;
+      padding: 0.8rem 1.2rem;
       border: none;
-      border-radius: 25px;
+      border-radius: 8px;
+      background: #d45079;
+      color: white;
       font-weight: 600;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: opacity 0.3s;
     }
-    .form-container button:hover {
-      background: #d45079;
+    .contact-container button:hover {
+      opacity: 0.8;
     }
 
     footer {
@@ -119,30 +130,28 @@
   </nav>
 
   <header class="gradient">
-    <h1>Contact Stitching Hope</h1>
+    <h1>Contact Us</h1>
     <p>We’d love to hear from you!</p>
   </header>
 
-  <section>
-    <h2>Get in Touch</h2>
-    <div class="form-container">
-      <form action="https://formspree.io/f/yourFormID" method="POST">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your Name" required />
+  <main>
+    <div class="contact-container">
+      <h2>Send Us a Message</h2>
+      <div class="contact-info">
+        <p>📍 Location: [Your City/State]</p>
+        <p>📧 Email: <a href="mailto:stitchinghope.org@gmail.com">stitchinghope.org@gmail.com</a></p>
+      </div>
+      <form action="https://formspree.io/f/mayvzkvq" method="POST">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="_replyto" placeholder="stitchinghope.org@gmail.com" required />
-
-        <label for="location">Location</label>
-        <input type="text" id="location" name="location" placeholder="New Jersey, USA" required />
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+        <label for="message">Message / Questions</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
 
         <button type="submit">Send Message</button>
       </form>
     </div>
-  </section>
+  </main>
 
   <footer class="gradient">
     <p>© 2025 Stitching Hope | Built with ❤️</p>
