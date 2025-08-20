@@ -13,28 +13,78 @@
       line-height: 1.6;
       background-color: #fff8f0;
       color: #333;
+      scroll-behavior: smooth;
     }
+
+    /* Gradient */
     .gradient {
       background: linear-gradient(90deg, #6a4c93, #d45079, #ff7b54, #fcbf49);
     }
+
+    /* Navbar */
     nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
       padding: 0.8rem;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      z-index: 1000;
     }
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 1rem;
+      margin: 0 1.2rem;
       font-weight: 600;
+      transition: opacity 0.3s;
     }
+    nav a:hover {
+      opacity: 0.8;
+    }
+
+    /* Header */
+    header {
+      color: white;
+      text-align: center;
+      padding: 6rem 1rem 3rem;
+      margin-top: 2.8rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    /* Section */
     section {
       padding: 3rem 1.5rem;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
     }
     h2 {
       color: #b23a48;
+      margin-bottom: 1rem;
     }
+
+    /* FAQ */
+    details {
+      background: #fff;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+    details summary {
+      font-weight: 600;
+      font-size: 1.05rem;
+      outline: none;
+    }
+    details p {
+      margin: 0.8rem 0 0;
+    }
+
+    /* Footer */
     footer {
       color: white;
       text-align: center;
@@ -44,24 +94,98 @@
   </style>
 </head>
 <body>
+  <!-- Navbar -->
   <nav class="gradient">
-    <a href="index.html">← Back to Home</a>
+    <a href="index.html">Home</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
+  <!-- Header -->
+  <header class="gradient">
+    <h1>Frequently Asked Questions</h1>
+    <p>Learn more about Stitching Hope and how you can be part of it</p>
+  </header>
+
+  <!-- FAQ Section -->
   <section>
-    <h2>Frequently Asked Questions</h2>
-    <h3>How can I start a chapter?</h3>
-    <p>You can apply using the "Start a Chapter" button on our homepage.</p>
+    <h2>General Questions</h2>
 
-    <h3>Do I need crochet experience?</h3>
-    <p>Nope! Anyone with a willingness to learn and contribute is welcome.</p>
+    <details>
+      <summary>What is Stitching Hope?</summary>
+      <p>Stitching Hope is a nonprofit initiative that connects senior living centers and homeless shelters through crochet and kindness. Volunteers crochet blankets and other items to bring comfort and community support.</p>
+    </details>
 
-    <h3>How are donations distributed?</h3>
-    <p>Finished items are delivered to local homeless shelters through our partnered organizations.</p>
+    <details>
+      <summary>Who can join Stitching Hope?</summary>
+      <p>Anyone who is passionate about making a difference! Whether you know how to crochet or want to learn, you’re welcome to join.</p>
+    </details>
+
+    <h2>What We Do</h2>
+
+    <details>
+      <summary>What kind of items do volunteers crochet?</summary>
+      <p>Volunteers typically crochet blankets, scarves, hats, and other essentials that bring warmth and comfort to people in need.</p>
+    </details>
+
+    <details>
+      <summary>How do you connect with senior living centers?</summary>
+      <p>We partner with senior centers where residents crochet items themselves or collaborate with younger volunteers. This fosters intergenerational bonds and creates a sense of purpose.</p>
+    </details>
+
+    <details>
+      <summary>How do donations reach homeless shelters?</summary>
+      <p>Chapter leaders work with local shelters to deliver handmade items. Our goal is to ensure each donation goes directly to individuals who need them most.</p>
+    </details>
+
+    <details>
+      <summary>Besides crocheting, what else do you do?</summary>
+      <p>We host workshops to teach new volunteers crochet, organize drives to collect yarn donations, and build community events where people can come together for a cause.</p>
+    </details>
+
+    <h2>Starting a Chapter</h2>
+
+    <details>
+      <summary>How do I start a chapter in my area?</summary>
+      <p>You can apply directly through our <a href="apply.html"><strong>Start a Chapter</strong></a> form. We’ll review your application and guide you through the process.</p>
+    </details>
+
+    <details>
+      <summary>What are the requirements to lead a chapter?</summary>
+      <p>Chapter leaders should be motivated, organized, and committed to fostering community connections. No prior experience is required — we’ll provide training and resources.</p>
+    </details>
+
+    <details>
+      <summary>What responsibilities does a chapter leader have?</summary>
+      <p>Leaders coordinate volunteers, connect with senior centers and shelters, organize donation drives, and ensure items reach those in need.</p>
+    </details>
+
+    <details>
+      <summary>Do I need to fund materials myself?</summary>
+      <p>No — while some volunteers donate their own yarn and supplies, Stitching Hope provides resources and support to help chapters get started.</p>
+    </details>
+
+    <details>
+      <summary>Can students start a chapter?</summary>
+      <p>Absolutely! Many of our chapters are student-led. It’s a great way to earn leadership experience and give back to your community.</p>
+    </details>
+
+    <h2>Impact</h2>
+
+    <details>
+      <summary>Who receives the crocheted items?</summary>
+      <p>Our crocheted blankets, scarves, and other creations are donated to local homeless shelters and shared with seniors in living centers.</p>
+    </details>
+
+    <details>
+      <summary>How does Stitching Hope make a difference?</summary>
+      <p>We provide warmth and comfort through handmade items while building bridges across generations and communities through acts of kindness.</p>
+    </details>
   </section>
 
+  <!-- Footer -->
   <footer class="gradient">
-    <p>© 2025 Stitching Hope | Built with ❤️</p>
+    <p>Built with ❤️ by Stitching Hope</p>
   </footer>
 </body>
 </html>
