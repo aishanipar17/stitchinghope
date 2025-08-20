@@ -82,6 +82,10 @@
       font-weight: 600;
     }
 
+    .contact-info p {
+      margin: 0.3rem 0;
+    }
+
     .contact-container label {
       display: block;
       margin: 1rem 0 0.3rem;
@@ -136,17 +140,17 @@
 
   <main>
     <div class="contact-container">
-      <h2>Send Us a Message</h2>
+      <h2>Get in Touch</h2>
       <div class="contact-info">
         <p>📍 Location: [Your City/State]</p>
         <p>📧 Email: <a href="mailto:stitchinghope.org@gmail.com">stitchinghope.org@gmail.com</a></p>
       </div>
       <form action="https://formspree.io/f/mayvzkvq" method="POST">
         <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <input type="text" id="name" name="name" required>
 
         <label for="message">Message / Questions</label>
-        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+        <textarea id="message" name="message" rows="5" required></textarea>
 
         <button type="submit">Send Message</button>
       </form>
