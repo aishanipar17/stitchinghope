@@ -67,6 +67,36 @@
       margin: 0 auto 1rem auto;
     }
 
+    /* Partnerships grid */
+    .partners {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .partner-card {
+      background: white;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .partner-card:hover {
+      transform: translateY(-5px);
+    }
+    .partner-card img {
+      max-width: 150px;
+      max-height: 100px;
+      object-fit: contain;
+      margin-bottom: 0.5rem;
+    }
+    .partner-card h3 {
+      margin: 0.5rem 0 0;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
     footer {
       color: white;
       text-align: center;
@@ -106,7 +136,22 @@
   <!-- Partnerships -->
   <section id="partnerships">
     <h2>Partnerships</h2>
-    <p>We are proud to work with senior living centers & homeless shelters such as [blank] to create a wide-reaching impact. Through these collaborations, we ensure that our handmade crochet donations and community support reach those who need them most.</p>
+    <p>We are proud to work with senior living centers, homeless shelters, schools, and community organizations to create a wide-reaching impact. Here are some of our amazing partners:</p>
+    
+    <div class="partners">
+      <div class="partner-card">
+        <img src="partner1-logo.png" alt="Partner 1 Logo">
+        <h3>Partner 1</h3>
+      </div>
+      <div class="partner-card">
+        <img src="partner2-logo.png" alt="Partner 2 Logo">
+        <h3>Partner 2</h3>
+      </div>
+      <div class="partner-card">
+        <img src="partner3-logo.png" alt="Partner 3 Logo">
+        <h3>Partner 3</h3>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
