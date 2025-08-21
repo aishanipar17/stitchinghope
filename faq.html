@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FAQ | Stitching Hope</title>
+  <title>Stitching Hope</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -54,34 +54,80 @@
       margin: 0;
       font-size: 2.5rem;
     }
+    header p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+    }
 
-    /* Section */
+    /* Sections */
     section {
       padding: 3rem 1.5rem;
       max-width: 900px;
       margin: auto;
+      text-align: center;
     }
     h2 {
       color: #b23a48;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    p {
+      margin-bottom: 2rem;
     }
 
-    /* FAQ */
-    details {
+    /* Mission Box */
+    .mission-box {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 3rem;
+    }
+
+    /* Start a Chapter Button */
+    .chapter-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #b23a48;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: opacity 0.3s;
+      z-index: 1000;
+    }
+    .chapter-btn:hover {
+      opacity: 0.8;
+    }
+
+    /* Partnerships */
+    .partners {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+    .partner-logo {
+      width: 150px;
+      height: 100px;
       background: #fff;
       border-radius: 12px;
-      margin-bottom: 1rem;
-      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      cursor: pointer;
+      transition: transform 0.3s;
     }
-    details summary {
-      font-weight: 600;
-      font-size: 1.05rem;
-      outline: none;
+    .partner-logo:hover {
+      transform: scale(1.05);
     }
-    details p {
-      margin: 0.8rem 0 0;
+    .partner-logo img {
+      max-width: 80%;
+      max-height: 80%;
+      object-fit: contain;
     }
 
     /* Footer */
@@ -91,6 +137,7 @@
       padding: 1rem;
       margin-top: 2rem;
     }
+
   </style>
 </head>
 <body>
@@ -99,89 +146,36 @@
     <a href="index.html">Home</a>
     <a href="faq.html">FAQ</a>
     <a href="contact.html">Contact</a>
+    <a href="board.html">Meet the Board</a>
   </nav>
 
   <!-- Header -->
   <header class="gradient">
-    <h1>Frequently Asked Questions</h1>
-    <p>Learn more about Stitching Hope and how you can be part of it</p>
+    <h1>Welcome to Stitching Hope</h1>
+    <p>Connecting communities through crochet, kindness, and compassion</p>
   </header>
 
-  <!-- FAQ Section -->
+  <!-- Mission Section -->
   <section>
-    <h2>General Questions</h2>
-
-    <details>
-      <summary>What is Stitching Hope?</summary>
-      <p>Stitching Hope is a nonprofit initiative that connects senior living centers and homeless shelters through crochet and kindness. Volunteers crochet blankets and other items to bring comfort and community support.</p>
-    </details>
-
-    <details>
-      <summary>Who can join Stitching Hope?</summary>
-      <p>Anyone who is passionate about making a difference! Whether you know how to crochet or want to learn, you’re welcome to join.</p>
-    </details>
-
-    <h2>What We Do</h2>
-
-    <details>
-      <summary>What kind of items do volunteers crochet?</summary>
-      <p>Volunteers typically crochet blankets, scarves, hats, and other essentials that bring warmth and comfort to people in need.</p>
-    </details>
-
-    <details>
-      <summary>How do you connect with senior living centers?</summary>
-      <p>We partner with senior centers where residents crochet items themselves or collaborate with younger volunteers. This fosters intergenerational bonds and creates a sense of purpose.</p>
-    </details>
-
-    <details>
-      <summary>How do donations reach homeless shelters?</summary>
-      <p>Chapter leaders work with local shelters to deliver handmade items. Our goal is to ensure each donation goes directly to individuals who need them most.</p>
-    </details>
-
-    <details>
-      <summary>Besides crocheting, what else do you do?</summary>
-      <p>We host workshops to teach new volunteers crochet, organize drives to collect yarn donations, and build community events where people can come together for a cause.</p>
-    </details>
-
-    <h2>Starting a Chapter</h2>
-
-    <details>
-      <summary>How do I start a chapter in my area?</summary>
-      <p>You can apply directly through our Start a Chapter form on our homepage. We’ll review your application and guide you through the process.</p>
-    </details>
-
-    <details>
-      <summary>What are the requirements to lead a chapter?</summary>
-      <p>Chapter leaders should be motivated, organized, and committed to fostering community connections. No prior experience is required — we’ll provide training and resources.</p>
-    </details>
-
-    <details>
-      <summary>What responsibilities does a chapter leader have?</summary>
-      <p>Leaders coordinate volunteers, connect with senior centers and shelters, organize donation drives, and ensure items reach those in need.</p>
-    </details>
-
-    <details>
-      <summary>Do I need to fund materials myself?</summary>
-      <p>No — while some volunteers donate their own yarn and supplies, Stitching Hope provides resources and support to help chapters get started.</p>
-    </details>
-
-    <details>
-      <summary>Can students start a chapter?</summary>
-      <p>Absolutely! Many of our chapters are student-led. It’s a great way to earn leadership experience and give back to your community.</p>
-    </details>
-
-    <h2>Impact</h2>
-
-    <details>
-      <summary>Who receives the crocheted items?</summary>
-      <p>Our crocheted blankets, scarves, and other creations are donated to local homeless shelters and shared with seniors in living centers.</p>
-    </details>
-
-    <details>
-      <summary>How does Stitching Hope make a difference?</summary>
-      <p>We provide warmth and comfort through handmade items while building bridges across generations and communities through acts of kindness.</p>
-    </details>
+    <h2>Our Mission</h2>
+    <div class="mission-box">
+      <p>Stitching Hope is dedicated to bridging generations and communities through crochet projects. Volunteers craft blankets and essentials that provide warmth and care to those in need, while fostering connections across ages.</p>
+    </div>
   </section>
+
+  <!-- Partnerships Section -->
+  <section>
+    <h2>Our Partners</h2>
+    <div class="partners">
+      <div class="partner-logo"><img src="partner1.png" alt="Partner 1"></div>
+      <div class="partner-logo"><img src="partner2.png" alt="Partner 2"></div>
+      <div class="partner-logo"><img src="partner3.png" alt="Partner 3"></div>
+      <div class="partner-logo"><img src="partner4.png" alt="Partner 4"></div>
+    </div>
+  </section>
+
+  <!-- Start a Chapter Button -->
+  <button class="chapter-btn" onclick="window.location.href='contact.html'">Start a Chapter</button>
 
   <!-- Footer -->
   <footer class="gradient">
