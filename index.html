@@ -18,7 +18,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: linear-gradient(90deg, #FFA07A, #FF4500, #FFD700, #800080);
+            background: linear-gradient(90deg, #FFA07A, #FF6347, #FFD700, #800080);
             padding: 1rem 2rem;
         }
 
@@ -37,19 +37,32 @@
         .hero {
             text-align: center;
             padding: 6rem 2rem 4rem 2rem;
-            background: linear-gradient(90deg, #FFA07A, #FF4500, #FFD700, #800080);
+            background: linear-gradient(135deg, #FF7F50, #FF6347, #FFD700, #800080);
             color: white;
-            border-radius: 0 0 20px 20px;
+            border-radius: 20px;
         }
 
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
+            font-weight: 700;
         }
 
         .hero p {
             font-size: 1.5rem;
             margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        /* Mission Box */
+        .mission-box {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
         }
 
         /* Floating Start a Chapter Button */
@@ -57,20 +70,21 @@
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background: #FF4500;
+            background: #FF6347;
             color: white;
             border: none;
             padding: 1rem 1.5rem;
-            font-size: 1rem;
-            border-radius: 8px;
+            font-size: 1.1rem;
+            border-radius: 12px;
             cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
             z-index: 100;
             transition: background 0.3s;
+            font-weight: 700;
         }
 
         .floating-button:hover {
-            background: #FF6347;
+            background: #FF4500;
         }
 
         /* Partnerships Section */
@@ -118,6 +132,12 @@
         <h1>Stitching Hope</h1>
         <p>Connecting Senior Living Centers & Homeless Shelters Through Crochet & Kindness</p>
     </section>
+
+    <!-- Mission Box -->
+    <div class="mission-box">
+        <h2>Our Mission</h2>
+        <p>We aim to bring communities together through acts of kindness, using crochet as a way to support senior living centers and homeless shelters.</p>
+    </div>
 
     <!-- Partnerships Section -->
     <section class="partnerships">
