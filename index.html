@@ -11,26 +11,28 @@
       margin: 0;
       padding: 0;
       line-height: 1.6;
-      background-color: #fff8f0; /* cream for sections */
+      background-color: #fff8f0;
       color: #333;
       scroll-behavior: smooth;
     }
 
-    /* Gradient same as FAQ */
+    /* Gradient */
     .gradient {
-      background: linear-gradient(90deg, #6a4c93, #b23a48, #ff7b54);
+      background: linear-gradient(90deg, #6a4c93, #d45079, #ff7b54, #fcbf49);
     }
 
-    /* Navbar sticky */
+    /* Navbar */
     nav {
-      position: sticky;
+      position: fixed;
       top: 0;
+      left: 0;
       width: 100%;
       padding: 0.8rem;
       display: flex;
       justify-content: center;
       z-index: 1000;
     }
+
     nav a {
       color: white;
       text-decoration: none;
@@ -38,6 +40,7 @@
       font-weight: 600;
       transition: opacity 0.3s;
     }
+
     nav a:hover {
       opacity: 0.8;
     }
@@ -47,11 +50,17 @@
       color: white;
       text-align: center;
       padding: 6rem 1rem 3rem;
-      margin-top: 0;
+      margin-top: 2.8rem;
     }
+
     header h1 {
       margin: 0;
       font-size: 2.5rem;
+    }
+
+    header p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
     }
 
     /* Sections */
@@ -60,72 +69,68 @@
       max-width: 900px;
       margin: auto;
     }
+
     h2 {
       color: #b23a48;
       margin-bottom: 1rem;
     }
 
-    .section-box {
-      background: #fff8f0; /* cream */
-      border-radius: 12px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-
-    /* Partnerships */
+    /* Boxes for Partnerships */
     .partners {
       display: flex;
       flex-wrap: wrap;
+      gap: 1.5rem;
       justify-content: center;
-      gap: 2rem;
     }
-    .partner-logo {
-      width: 150px;
-      height: 100px;
-      object-fit: contain;
-      border-radius: 8px;
+
+    .partner-box {
       background: #fff;
+      border-radius: 12px;
       padding: 1rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      width: 180px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       transition: transform 0.3s;
     }
-    .partner-logo:hover {
+
+    .partner-box:hover {
       transform: scale(1.05);
     }
 
-    /* Start a Chapter Button */
-    .start-chapter {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      background-color: #b23a48;
-      color: white;
-      padding: 1rem 1.5rem;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 600;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: background 0.3s, transform 0.2s;
-      z-index: 1000;
-    }
-    .start-chapter:hover {
-      background-color: #d45079;
-      transform: translateY(-2px);
-    }
-
+    /* Footer */
     footer {
       color: white;
       text-align: center;
       padding: 1rem;
       margin-top: 2rem;
-      background: #6a4c93;
+    }
+
+    /* Floating Start a Chapter Button */
+    .start-chapter-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #b23a48;
+      color: white;
+      border: none;
+      padding: 1rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      z-index: 1000;
+      transition: transform 0.2s;
+    }
+
+    .start-chapter-btn:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
-
   <!-- Navbar -->
   <nav class="gradient">
     <a href="index.html">Home</a>
@@ -142,31 +147,27 @@
 
   <!-- Mission Section -->
   <section>
-    <div class="section-box">
-      <h2>Our Mission</h2>
-      <p>We aim to bring comfort and joy to seniors and the homeless by connecting volunteers to craft handmade items that matter.</p>
-    </div>
+    <h2>Our Mission</h2>
+    <p>Stitching Hope is a nonprofit initiative that brings together volunteers to crochet blankets, scarves, and essential items for seniors and those experiencing homelessness. We aim to foster compassion, creativity, and community connections through our work.</p>
   </section>
 
   <!-- Partnerships Section -->
   <section>
     <h2>Our Partners</h2>
     <div class="partners">
-      <img src="partner1.png" alt="Partner 1" class="partner-logo">
-      <img src="partner2.png" alt="Partner 2" class="partner-logo">
-      <img src="partner3.png" alt="Partner 3" class="partner-logo">
-      <img src="partner4.png" alt="Partner 4" class="partner-logo">
-      <!-- Add more logos -->
+      <div class="partner-box">Partner Logo 1</div>
+      <div class="partner-box">Partner Logo 2</div>
+      <div class="partner-box">Partner Logo 3</div>
+      <div class="partner-box">Partner Logo 4</div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer>
+  <footer class="gradient">
     <p>Built with ❤️ by Stitching Hope</p>
   </footer>
 
   <!-- Start a Chapter Button -->
-  <a href="#start-chapter-form" class="start-chapter">Start a Chapter</a>
-
+  <button class="start-chapter-btn">Start a Chapter</button>
 </body>
 </html>
