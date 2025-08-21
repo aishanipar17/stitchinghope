@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stitching Hope</title>
+  <title>Home | Stitching Hope</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -16,20 +16,20 @@
       scroll-behavior: smooth;
     }
 
-    /* GRADIENT */
+    /* Gradient for navbar and header */
     .gradient {
-      background: linear-gradient(135deg, #6a4c93, #d45079, #ff7b54, #fcbf49);
+      background: linear-gradient(90deg, #6a4c93, #d45079, #ff7b54, #fcbf49);
     }
 
-    /* NAVBAR */
+    /* Navbar - sticky at top */
     nav {
       position: sticky;
       top: 0;
+      left: 0;
       width: 100%;
       padding: 1rem;
       display: flex;
       justify-content: center;
-      background: linear-gradient(135deg, #6a4c93, #d45079, #ff7b54, #fcbf49);
       z-index: 1000;
     }
     nav a {
@@ -43,12 +43,12 @@
       opacity: 0.8;
     }
 
-    /* HEADER */
+    /* Header */
     header {
+      color: white;
       text-align: center;
       padding: 6rem 1rem 3rem;
-      background: linear-gradient(135deg, #6a4c93, #d45079, #ff7b54, #fcbf49);
-      color: white;
+      margin-top: 0;
     }
     header h1 {
       margin: 0;
@@ -59,9 +59,9 @@
       font-size: 1.1rem;
     }
 
-    /* SECTIONS */
+    /* Sections */
     section {
-      padding: 3rem 1.5rem;
+      padding: 2rem 1.5rem;
       max-width: 900px;
       margin: auto;
     }
@@ -70,109 +70,98 @@
       margin-bottom: 1rem;
     }
 
-    /* MISSION & PARTNERS */
-    .boxes-container {
+    /* Mission and partnerships spacing */
+    .mission, .partnerships {
+      margin-bottom: 2rem;
+    }
+
+    /* Partner boxes */
+    .partners {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.5rem;
+      gap: 1rem;
       justify-content: center;
     }
-    .box {
+    .partner-box {
       background: #fff8f0;
       border-radius: 12px;
-      padding: 1.5rem;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      flex: 1 1 calc(33% - 1rem);
+      min-width: 200px;
       text-align: center;
-      flex: 1 1 250px;
-      max-width: 250px;
-      transition: transform 0.3s;
-      cursor: pointer;
-    }
-    .box:hover {
-      transform: translateY(-5px);
     }
 
-    /* FOOTER */
-    footer {
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-      background: linear-gradient(135deg, #6a4c93, #d45079, #ff7b54, #fcbf49);
-    }
-
-    /* STICKY START A CHAPTER BUTTON */
+    /* Sticky "Start a Chapter" button */
     .start-chapter {
       position: fixed;
-      bottom: 1.5rem;
-      right: 1.5rem;
-      background: #d45079;
+      bottom: 2rem;
+      right: 2rem;
+      background-color: #6a4c93;
       color: white;
       padding: 1rem 1.5rem;
       border-radius: 8px;
       font-weight: 600;
       text-decoration: none;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      z-index: 1001;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
       transition: opacity 0.3s;
     }
     .start-chapter:hover {
       opacity: 0.8;
     }
 
-    /* REDUCE SPACING FOR MISSION & PARTNERS */
-    .section-tight {
-      padding-top: 2rem;
-      padding-bottom: 2rem;
+    /* Footer */
+    footer {
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
+  <!-- Navbar -->
+  <nav class="gradient">
     <a href="index.html">Home</a>
     <a href="faq.html">FAQ</a>
     <a href="contact.html">Contact</a>
     <a href="board.html">Meet the Board</a>
   </nav>
 
-  <!-- HEADER -->
-  <header>
+  <!-- Header -->
+  <header class="gradient">
     <h1>Stitching Hope</h1>
-    <p>Connecting communities through crochet, kindness, and compassion</p>
+    <p>Connecting communities through crochet and kindness</p>
   </header>
 
-  <!-- MISSION SECTION -->
-  <section class="section-tight">
+  <!-- Mission Section -->
+  <section class="mission">
     <h2>Our Mission</h2>
-    <div class="boxes-container">
-      <div class="box">Provide comfort to seniors and homeless individuals</div>
-      <div class="box">Foster community connections</div>
-      <div class="box">Encourage volunteer engagement</div>
-    </div>
+    <p>Stitching Hope brings together volunteers to create handcrafted items that provide warmth and comfort to seniors and individuals experiencing homelessness, fostering intergenerational and community connections.</p>
   </section>
 
-  <!-- PARTNERSHIPS SECTION -->
-  <section class="section-tight">
+  <!-- Partnerships Section -->
+  <section class="partnerships">
     <h2>Our Partners</h2>
-    <div class="boxes-container">
-      <div class="box">Partner 1</div>
-      <div class="box">Partner 2</div>
-      <div class="box">Partner 3</div>
-      <div class="box">Partner 4</div>
-      <div class="box">Partner 5</div>
-      <div class="box">Partner 6</div>
+    <div class="partners">
+      <div class="partner-box">Partner 1</div>
+      <div class="partner-box">Partner 2</div>
+      <div class="partner-box">Partner 3</div>
+      <div class="partner-box">Partner 4</div>
+      <div class="partner-box">Partner 5</div>
+      <div class="partner-box">Partner 6</div>
     </div>
   </section>
 
-  <!-- STICKY START A CHAPTER BUTTON -->
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLScwH5wASKWcrPu2acv8GhKCCmRY5cKZHHOlw7kgeMLpgIaTvg/viewform" class="start-chapter" target="_blank">Start a Chapter</a>
-
-  <!-- FOOTER -->
-  <footer>
+  <!-- Footer -->
+  <footer class="gradient">
     <p>Built with ❤️ by Stitching Hope</p>
   </footer>
+
+  <!-- Sticky "Start a Chapter" Button -->
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLScwH5wASKWcrPu2acv8GhKCCmRY5cKZHHOlw7kgeMLpgIaTvg/viewform" class="start-chapter">Start a Chapter</a>
 
 </body>
 </html>
