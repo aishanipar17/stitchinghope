@@ -6,83 +6,76 @@
   <title>Stitching Hope</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fff4e6;
-      color: #333;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    header {
-      background: linear-gradient(90deg, #f6aa1c, #d45079, #6a0572);
-      padding: 1rem 2rem;
+    /* Basic Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+    body { background: #fff3e0; color: #333; line-height: 1.6; }
+
+    /* Navigation Bar */
+    nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 1rem 2rem;
+      background: linear-gradient(90deg, #fbb13c, #d45079, #6a0dad);
       color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
     nav a {
-      margin-left: 2rem;
-      font-weight: 700;
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 600;
     }
+    nav .logo { font-size: 1.5rem; font-weight: 700; }
+
+    /* Hero Section */
     .hero {
       text-align: center;
-      padding: 5rem 1rem 3rem 1rem;
+      padding: 6rem 2rem 4rem 2rem;
+      background: linear-gradient(135deg, #fbb13c, #d45079, #6a0dad);
+      color: white;
     }
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.25rem; max-width: 700px; margin: 0 auto; }
+
+    /* Partnerships Section */
     .partnerships {
       padding: 4rem 2rem;
       text-align: center;
-      background-color: #fff4e6;
+      background: #fff3e0;
     }
-    .partnerships h2 {
-      margin-bottom: 2rem;
-      font-size: 2rem;
-    }
-    .partners-logos {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+    .partnerships h2 { font-size: 2rem; margin-bottom: 2rem; }
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 2rem;
+      align-items: center;
+      justify-items: center;
     }
-    .partners-logos img {
-      max-width: 150px;
+    .partners-grid img {
+      max-width: 100%;
+      height: 80px;
+      object-fit: contain;
       border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-    }
-    .partners-logos img:hover {
-      transform: scale(1.05);
-    }
-    footer {
-      background: linear-gradient(90deg, #6a0572, #d45079, #f6aa1c);
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    footer p {
-      margin: 0.5rem 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
-    /* Floating Start a Chapter Button */
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(90deg, #fbb13c, #d45079, #6a0dad);
+      color: white;
+    }
+
+    /* Floating Button */
     .floating-btn {
       position: fixed;
       bottom: 30px;
       right: 30px;
-      background: #b23a48;
+      background: #d45079;
       color: white;
       padding: 1rem 1.5rem;
       border-radius: 50px;
@@ -94,39 +87,41 @@
     }
     .floating-btn:hover {
       transform: translateY(-3px);
-      background: #d45079;
+      background: #f48cae;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="logo">
-      <h2>Stitching Hope</h2>
-    </div>
-    <nav>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">Stitching Hope</div>
+    <div>
       <a href="index.html">Home</a>
       <a href="mission.html">Mission</a>
       <a href="organizations.html">Organizations</a>
-      <a href="board.html">Board</a>
-    </nav>
-  </header>
+      <a href="board.html">Meet the Board</a>
+    </div>
+  </nav>
 
+  <!-- Hero Section -->
   <section class="hero">
     <h1>Stitching Hope</h1>
     <p>Connecting Senior Living Centers & Homeless Shelters Through Crochet & Kindness</p>
   </section>
 
+  <!-- Partnerships Section -->
   <section class="partnerships">
     <h2>Our Partners</h2>
-    <div class="partners-logos">
-      <!-- Replace with your partner logos -->
-      <img src="partner1.png" alt="Partner 1">
-      <img src="partner2.png" alt="Partner 2">
-      <img src="partner3.png" alt="Partner 3">
+    <div class="partners-grid">
+      <img src="placeholder1.png" alt="Partner 1 Logo">
+      <img src="placeholder2.png" alt="Partner 2 Logo">
+      <img src="placeholder3.png" alt="Partner 3 Logo">
+      <img src="placeholder4.png" alt="Partner 4 Logo">
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>Built with ❤️ by Stitching Hope</p>
   </footer>
