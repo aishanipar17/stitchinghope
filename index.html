@@ -16,11 +16,6 @@
       scroll-behavior: smooth;
     }
 
-    /* Cozy Fire Gradient */
-    .gradient {
-      background: linear-gradient(90deg, #6a4c93, #d45079, #ff7b54, #fcbf49);
-    }
-
     /* Navbar */
     nav {
       position: fixed;
@@ -30,6 +25,7 @@
       padding: 0.8rem;
       display: flex;
       justify-content: center;
+      background: linear-gradient(90deg, #6a4c93, #d45079, #ff7b54, #fcbf49);
       z-index: 1000;
     }
     nav a {
@@ -48,7 +44,6 @@
       color: white;
       text-align: center;
       padding: 6rem 1rem 3rem;
-      margin-top: 2.8rem;
     }
     header h1 {
       margin: 0;
@@ -99,7 +94,7 @@
       background: #d45079;
     }
 
-    /* Floating Apply Button */
+    /* Floating Start a Chapter Button */
     .floating-button {
       position: fixed;
       bottom: 20px;
@@ -125,12 +120,13 @@
       text-align: center;
       padding: 1rem;
       margin-top: 2rem;
+      background: linear-gradient(90deg, #6a4c93, #d45079, #ff7b54, #fcbf49);
     }
   </style>
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="gradient">
+  <nav>
     <a href="#home">Home</a>
     <a href="#mission">Mission</a>
     <a href="#organizations">Organizations</a>
@@ -138,7 +134,7 @@
   </nav>
 
   <!-- Home Section -->
-  <header id="home" class="gradient">
+  <header id="home">
     <h1>Stitching Hope</h1>
     <p>Connecting Senior Living Centers & Homeless Shelters Through Crochet & Kindness</p>
   </header>
@@ -159,8 +155,7 @@
     <h2>Partner Organizations</h2>
     <p>
       Currently, we are partnering with senior living centers that already have crochet or knitting 
-      groups as well as homeless shelters to donate clothing to. If you would like to partner with us, please reach out! Together, we can 
-      expand our community impact.
+      groups as well as homeless shelters to donate clothing to. If you would like to partner with us, please reach out!
     </p>
     <div>
       <img src="https://via.placeholder.com/150/ff7b54/ffffff?text=Org+1" alt="Partner Logo">
@@ -170,11 +165,11 @@
   </section>
 
   <!-- Footer -->
-  <footer class="gradient">
+  <footer>
     <p>© 2025 Stitching Hope | Built with ❤️</p>
   </footer>
 
-  <!-- Floating Apply Button -->
+  <!-- Floating Start a Chapter Button -->
   <a href="https://docs.google.com/forms/d/1Xq7FO0nHXpQ2pB_O0dori_6rAh5pEcFWWvIb0Gpk4ek/viewform?usp=sf_link" target="_blank" class="floating-button">Start a Chapter</a>
 </body>
 </html>
