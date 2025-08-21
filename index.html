@@ -2,161 +2,145 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Stitching Hope</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    /* General */
     body {
-      font-family: 'Montserrat', sans-serif;
       margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background-color: #fff8f0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #6a4c93, #ff7b54, #fcbf49);
       color: #333;
-      scroll-behavior: smooth;
     }
 
-    /* Gradient */
-    .gradient {
-      background: linear-gradient(90deg, #6a4c93, #d45079, #ff7b54, #fcbf49);
-    }
-
-    /* Navbar */
-    nav {
+    header {
       position: fixed;
       top: 0;
-      left: 0;
       width: 100%;
-      padding: 0.8rem;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 1rem 2rem;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
+      align-items: center;
       z-index: 1000;
     }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 1.2rem;
-      font-weight: 600;
-      transition: opacity 0.3s;
-    }
-    nav a:hover {
-      opacity: 0.8;
-    }
 
-    /* Header */
-    header {
-      color: white;
-      text-align: center;
-      padding: 6rem 1rem 3rem;
-      margin-top: 2.8rem;
-    }
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-weight: 700;
+      color: #6a4c93;
     }
 
-    /* Sections */
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      color: #333;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #6a4c93;
+    }
+
     section {
-      padding: 2rem 1.5rem;
-      max-width: 1200px;
-      margin: auto;
+      padding: 5rem 2rem;
+      background: #fffaf0; /* cream background */
+      margin: 5rem 2rem 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
-    .mission {
+    section h2 {
       text-align: center;
-      margin-top: 1rem;
-      font-size: 1.1rem;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #6a4c93;
     }
 
-    /* Partnerships */
-    .partners {
+    .partners-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1.5rem;
-      justify-items: center;
-      align-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
       margin-top: 1rem;
     }
-    .partners img {
-      max-width: 150px;
-      transition: transform 0.3s;
-    }
-    .partners img:hover {
-      transform: scale(1.05);
+
+    .partner-box {
+      background-color: #fcbf49;
+      color: #6a4c93;
+      font-weight: 600;
+      padding: 1.5rem;
+      text-align: center;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.3s, background-color 0.3s;
     }
 
-    /* Start a Chapter Button */
-    .start-chapter {
+    .partner-box:hover {
+      transform: scale(1.05);
+      background-color: #ff7b54;
+      color: #fff;
+    }
+
+    /* Floating button */
+    .floating-btn {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: #ff7b54;
-      color: white;
-      border: none;
-      padding: 0.8rem 1.2rem;
-      border-radius: 12px;
-      font-family: 'Montserrat', sans-serif;
+      background: #6a4c93;
+      color: #fff;
       font-weight: 600;
+      padding: 1rem 1.5rem;
+      border: none;
+      border-radius: 50px;
       cursor: pointer;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      font-family: 'Montserrat', sans-serif;
+      transition: background 0.3s;
       z-index: 1000;
-      transition: transform 0.2s;
-    }
-    .start-chapter:hover {
-      transform: scale(1.05);
     }
 
-    /* Footer */
-    footer {
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-      background-color: #6a4c93;
+    .floating-btn:hover {
+      background: #ff7b54;
     }
   </style>
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="gradient">
-    <a href="index.html">Home</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contact.html">Contact</a>
-    <a href="board.html">Meet the Board</a>
-  </nav>
-
-  <!-- Header -->
-  <header class="gradient">
-    <h1>Welcome to Stitching Hope</h1>
-    <p>Connecting communities through crochet and kindness</p>
+  <header>
+    <h1>Stitching Hope</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <a href="board.html">Meet the Board</a>
+    </nav>
   </header>
 
-  <!-- Mission Section -->
-  <section class="mission">
-    <h2>Our Mission</h2>
-    <p>We aim to bring comfort and joy to seniors and the homeless by creating handmade crochet items while fostering intergenerational and community connections.</p>
-  </section>
+  <main>
+    <!-- Mission Section -->
+    <section id="mission">
+      <h2>Our Mission</h2>
+      <p style="text-align:center; max-width:700px; margin:0 auto;">
+        At Stitching Hope, we believe in weaving together compassion and action. Our mission is to
+        provide handmade clothing and essentials for communities in need while fostering creativity,
+        kindness, and unity.
+      </p>
+    </section>
 
-  <!-- Partnerships Section -->
-  <section class="partners">
-    <h2>Our Partners</h2>
-    <div class="partners">
-      <img src="partner1.png" alt="Partner 1">
-      <img src="partner2.png" alt="Partner 2">
-      <img src="partner3.png" alt="Partner 3">
-      <img src="partner4.png" alt="Partner 4">
-      <img src="partner5.png" alt="Partner 5">
-      <img src="partner6.png" alt="Partner 6">
-    </div>
-  </section>
+    <!-- Partnerships Section -->
+    <section id="partnerships">
+      <h2>Our Partners</h2>
+      <div class="partners-grid">
+        <div class="partner-box">Partner 1</div>
+        <div class="partner-box">Partner 2</div>
+        <div class="partner-box">Partner 3</div>
+        <div class="partner-box">Partner 4</div>
+        <div class="partner-box">Partner 5</div>
+        <div class="partner-box">Partner 6</div>
+      </div>
+    </section>
+  </main>
 
-  <!-- Start a Chapter Button -->
-  <button class="start-chapter" onclick="window.location.href='contact.html'">Start a Chapter</button>
-
-  <!-- Footer -->
-  <footer class="gradient">
-    <p>Built with ❤️ by Stitching Hope</p>
-  </footer>
+  <button class="floating-btn">Start a Chapter</button>
 </body>
 </html>
