@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home | Stitching Hope</title>
+  <title>Stitching Hope</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -61,7 +61,7 @@
 
     /* Sections */
     section {
-      padding: 2rem 1.5rem;
+      padding: 3rem 1.5rem;
       max-width: 900px;
       margin: auto;
     }
@@ -70,45 +70,60 @@
       margin-bottom: 1rem;
     }
 
-    /* Mission and partnerships spacing */
-    .mission, .partnerships {
-      margin-bottom: 2rem;
+    /* Partners boxes */
+    .boxes-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+    .box {
+      background: #fff8f0; /* cream boxes */
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .box:hover {
+      transform: translateY(-5px);
     }
 
-    /* Partner boxes */
-    .partners {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
-    .partner-box {
+    /* Mission & FAQ details boxes */
+    details {
       background: #fff8f0;
       border-radius: 12px;
+      margin-bottom: 1rem;
+      padding: 1.2rem 1.5rem;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      padding: 1.5rem;
-      flex: 1 1 calc(33% - 1rem);
-      min-width: 200px;
-      text-align: center;
+      cursor: pointer;
+    }
+    details summary {
+      font-weight: 600;
+      font-size: 1.05rem;
+      outline: none;
+    }
+    details p {
+      margin: 0.8rem 0 0;
     }
 
     /* Sticky "Start a Chapter" button */
     .start-chapter {
       position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      background-color: #6a4c93;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      background: #b23a48;
       color: white;
       padding: 1rem 1.5rem;
-      border-radius: 8px;
+      border-radius: 50px;
       font-weight: 600;
       text-decoration: none;
-      z-index: 1000;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      transition: opacity 0.3s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: background 0.3s, transform 0.2s;
+      z-index: 1001;
     }
     .start-chapter:hover {
-      opacity: 0.8;
+      background: #d45079;
+      transform: translateY(-2px);
     }
 
     /* Footer */
@@ -117,6 +132,7 @@
       text-align: center;
       padding: 1rem;
       margin-top: 2rem;
+      background: linear-gradient(90deg, #6a4c93, #d45079, #ff7b54, #fcbf49);
     }
   </style>
 </head>
@@ -132,35 +148,76 @@
 
   <!-- Header -->
   <header class="gradient">
-    <h1>Stitching Hope</h1>
-    <p>Connecting communities through crochet and kindness</p>
+    <h1>Welcome to Stitching Hope</h1>
+    <p>Connecting communities through crochet, kindness, and compassion</p>
   </header>
 
   <!-- Mission Section -->
-  <section class="mission">
+  <section>
     <h2>Our Mission</h2>
-    <p>Stitching Hope brings together volunteers to create handcrafted items that provide warmth and comfort to seniors and individuals experiencing homelessness, fostering intergenerational and community connections.</p>
+    <details>
+      <summary>What is our goal?</summary>
+      <p>We aim to bring comfort and joy through crochet projects that support seniors and homeless communities.</p>
+    </details>
+    <details>
+      <summary>Who benefits?</summary>
+      <p>Our projects directly benefit residents at senior living centers and individuals in homeless shelters.</p>
+    </details>
   </section>
 
   <!-- Partnerships Section -->
-  <section class="partnerships">
+  <section>
     <h2>Our Partners</h2>
-    <div class="partners">
-      <div class="partner-box">Partner 1</div>
-      <div class="partner-box">Partner 2</div>
-      <div class="partner-box">Partner 3</div>
-      <div class="partner-box">Partner 4</div>
-      <div class="partner-box">Partner 5</div>
-      <div class="partner-box">Partner 6</div>
+    <div class="boxes-container">
+      <div class="box">
+        <h3>Partner 1</h3>
+        <p>Description of Partner 1</p>
+      </div>
+      <div class="box">
+        <h3>Partner 2</h3>
+        <p>Description of Partner 2</p>
+      </div>
+      <div class="box">
+        <h3>Partner 3</h3>
+        <p>Description of Partner 3</p>
+      </div>
+      <div class="box">
+        <h3>Partner 4</h3>
+        <p>Description of Partner 4</p>
+      </div>
+      <div class="box">
+        <h3>Partner 5</h3>
+        <p>Description of Partner 5</p>
+      </div>
+      <div class="box">
+        <h3>Partner 6</h3>
+        <p>Description of Partner 6</p>
+      </div>
+      <div class="box">
+        <h3>Partner 7</h3>
+        <p>Description of Partner 7</p>
+      </div>
+      <div class="box">
+        <h3>Partner 8</h3>
+        <p>Description of Partner 8</p>
+      </div>
+      <div class="box">
+        <h3>Partner 9</h3>
+        <p>Description of Partner 9</p>
+      </div>
+      <div class="box">
+        <h3>Partner 10</h3>
+        <p>Description of Partner 10</p>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="gradient">
+  <footer>
     <p>Built with ❤️ by Stitching Hope</p>
   </footer>
 
-  <!-- Sticky "Start a Chapter" Button -->
+  <!-- Sticky Start a Chapter Button -->
   <a href="https://docs.google.com/forms/d/e/1FAIpQLScwH5wASKWcrPu2acv8GhKCCmRY5cKZHHOlw7kgeMLpgIaTvg/viewform" class="start-chapter">Start a Chapter</a>
 
 </body>
