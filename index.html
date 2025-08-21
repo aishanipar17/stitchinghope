@@ -11,7 +11,7 @@
       margin: 0;
       padding: 0;
       line-height: 1.6;
-      background-color: #fff8f0; /* cream background */
+      background-color: #fff8f0;
       color: #333;
       scroll-behavior: smooth;
     }
@@ -70,23 +70,47 @@
       margin-bottom: 1rem;
     }
 
-    /* Partner Boxes */
-    .partners-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1rem; /* moves boxes up slightly */
+    /* Mission and Partner boxes */
+    .boxes-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
     }
-    .partner-box {
-      background: #ffffff;
+    .box, .partner-box {
+      background: #fff; /* all boxes white */
       border-radius: 12px;
-      padding: 1.5rem;
+      padding: 2rem;
+      flex: 1 1 200px;
       text-align: center;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
     }
-    .partner-box:hover {
-      transform: translateY(-5px);
+
+    /* Partners slightly moved up */
+    .partners-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: -1rem;
+    }
+
+    /* Sticky Start a Chapter button */
+    .sticky-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #b23a48;
+      color: white;
+      padding: 0.8rem 1.2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      z-index: 1001;
+      transition: opacity 0.3s;
+    }
+    .sticky-button:hover {
+      opacity: 0.8;
     }
 
     /* Footer */
@@ -110,18 +134,22 @@
 
   <!-- Header -->
   <header class="gradient">
-    <h1>Welcome to Stitching Hope</h1>
+    <h1>Stitching Hope</h1>
     <p>Connecting communities through crochet and kindness</p>
   </header>
 
   <!-- Mission Section -->
   <section>
     <h2>Our Mission</h2>
-    <p>Stitching Hope connects senior living centers and homeless shelters through crochet and acts of kindness, fostering community and intergenerational bonds.</p>
+    <div class="boxes-container">
+      <div class="box">Bring warmth to those in need</div>
+      <div class="box">Foster intergenerational bonds</div>
+      <div class="box">Support local shelters and centers</div>
+    </div>
   </section>
 
   <!-- Partners Section -->
-  <section style="padding-top: 2rem;">
+  <section>
     <h2>Our Partners</h2>
     <div class="partners-container">
       <div class="partner-box">Partner 1</div>
@@ -139,15 +167,8 @@
     </div>
   </section>
 
-  <!-- Start a Chapter -->
-  <section>
-    <h2>Start a Chapter</h2>
-    <p>Interested in starting a chapter in your area? Click below to apply!</p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLScwH5wASKWcrPu2acv8GhKCCmRY5cKZHHOlw7kgeMLpgIaTvg/viewform" 
-       style="display:inline-block; padding:0.8rem 1.2rem; background:#b23a48; color:white; border-radius:8px; text-decoration:none; font-weight:600;">
-       Start a Chapter
-    </a>
-  </section>
+  <!-- Sticky Start a Chapter Button -->
+  <a class="sticky-button" href="https://docs.google.com/forms/d/e/1FAIpQLScwH5wASKWcrPu2acv8GhKCCmRY5cKZHHOlw7kgeMLpgIaTvg/viewform" target="_blank">Start a Chapter</a>
 
   <!-- Footer -->
   <footer class="gradient">
