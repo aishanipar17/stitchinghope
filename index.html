@@ -16,7 +16,7 @@
       scroll-behavior: smooth;
     }
 
-    /* Gradient for navbar and headers */
+    /* Gradient for navbar and header */
     .gradient {
       background: linear-gradient(90deg, #6a4c93, #d45079, #ff7b54, #fcbf49);
     }
@@ -48,6 +48,7 @@
       color: white;
       text-align: center;
       padding: 5rem 1rem 2rem;
+      margin-top: 0;
     }
     header h1 {
       margin: 0;
@@ -60,30 +61,30 @@
 
     /* Sections */
     section {
-      padding: 2rem 1.5rem;
+      padding: 2.5rem 1.5rem;
       max-width: 900px;
       margin: auto;
     }
     h2 {
       color: #b23a48;
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
     }
 
-    /* Boxes */
+    /* Boxes (Mission + Partners) */
     .box {
-      background: #fff;
+      background: white;
       border-radius: 12px;
       margin-bottom: 1rem;
       padding: 1.2rem 1.5rem;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
-    /* Partner boxes slightly moved up */
-    .partners {
+    /* Partners grid */
+    .partners-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 1rem;
-      margin-top: -1rem;
+      margin-top: -1rem; /* slightly moved up */
     }
 
     /* Footer */
@@ -94,44 +95,44 @@
       margin-top: 2rem;
     }
 
-    /* Section spacing adjustments */
+    /* Add spacing to prevent content being hidden behind sticky navbar */
     section:first-of-type {
       margin-top: 2rem;
     }
-
   </style>
 </head>
 <body>
 
   <!-- Navbar -->
-<nav class="gradient">
-  <a href="index.html">Home</a>
-  <a href="faq.html">FAQ</a>
-  <a href="contact.html">Contact</a>
-  <a href="meet-the-board.html">Meet the Board</a>
-</nav>
-
+  <nav class="gradient">
+    <a href="index.html">Home</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="board.html">Meet the Board</a>
+  </nav>
 
   <!-- Header -->
   <header class="gradient">
-    <h1>Welcome to Stitching Hope</h1>
+    <h1>Stitching Hope</h1>
     <p>Connecting communities through crochet and kindness</p>
   </header>
 
-   <!-- Our Mission Section -->
+  <!-- Our Mission Section -->
   <section>
     <h2>Our Mission</h2>
     <div class="box">
-      <p>Our mission is to connect generations and communities through crochet. We aim to provide comfort to those in need while fostering creativity, purpose, and intergenerational collaboration.</p>
+      <p>Stitching Hope brings together volunteers and senior living communities to crochet items that provide warmth, comfort, and connection to those in need. Our mission is to foster intergenerational bonds and make a tangible difference in the lives of the unhoused and elderly.</p>
     </div>
   </section>
-  
+
   <!-- Our Story Section -->
   <section>
     <h2>Our Story</h2>
     <div class="box">
-      <p>Stitching Hope began with a mix of frustration, compassion, and inspiration. While working as a medical assistant in geriatrics, Khushi often heard residents express how sad and isolated they felt, with no community, while also feeling as if their days lacked purpose and their hobbies were just ways to pass the time. At the same time, living in Philadelphia where there seemed to be a homeless person on every other street corner that needed help, she felt powerless walking past the unhoused community each day. She saw people struggle without even the basic necessities such as socks, gloves and more in the frigid cold that even she couldn’t bear for more than an hour even with those things, wishing she could do more.<br><br>
-      The idea for the nonprofit began to take shape one holiday break while Khushi was helping her younger brother, Krish, clean out his room. Among the old clothes and toys they planned to donate, they stumbled upon piles of Krish’s crochet projects: years’ worth of hats, scarves, and trinkets he had created since fourth grade. There are only so many one family can use, but what felt like a surplus to them, they realized in that moment, could be life-changing for someone in need. Donating his projects sparked the thought that perhaps many others may have the same “problem,” which could actually become a solution. Remembering the senior citizens who also loved to knit and crochet, the vision formed.<br><br>
+      <p>Stitching Hope began with a mix of frustration, compassion, and inspiration. While working as a medical assistant in geriatrics, Khushi often heard residents express how sad and isolated they felt, with no community, while also feeling as if their days lacked purpose and their hobbies were just ways to pass the time. At the same time, living in Philadelphia where there seemed to be a homeless person on every other street corner that needed help, she felt powerless walking past the unhoused community each day. She saw people struggle without even the basic necessities such as socks, gloves and more in the frigid cold that even she couldn’t bear for more than an hour even with those things, wishing she could do more.
+      <br><br>
+      The idea for the nonprofit began to take shape one holiday break while Khushi was helping her younger brother, Krish, clean out his room. Among the old clothes and toys they planned to donate, they stumbled upon piles of Krish’s crochet projects: years’ worth of hats, scarves, and trinkets he had created since fourth grade. There are only so many one family can use, but what felt like a surplus to them, they realized in that moment, could be life-changing for someone in need. Donating his projects sparked the thought that perhaps many others may have the same “problem,” which could actually become a solution. Remembering the senior citizens who also loved to knit and crochet, the vision formed.
+      <br><br>
       From this vision, Stitching Hope was born: a bridge between communities. By giving seniors a renewed sense of meaning through making, while directly addressing the needs of the unhoused, Stitching Hope creates connection, purpose, and impact with every stitch.</p>
     </div>
   </section>
@@ -139,7 +140,7 @@
   <!-- Our Partners Section -->
   <section>
     <h2>Our Partners</h2>
-    <div class="partners">
+    <div class="partners-grid">
       <div class="box">Partner 1</div>
       <div class="box">Partner 2</div>
       <div class="box">Partner 3</div>
