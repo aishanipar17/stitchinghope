@@ -10,24 +10,22 @@
       font-family: 'Montserrat', sans-serif;
       margin: 0;
       padding: 0;
-      line-height: 1.5;
+      line-height: 1.6;
       background-color: #fff8f0;
       color: #333;
       scroll-behavior: smooth;
     }
 
-    /* Gradient for navbar and header */
     .gradient {
       background: linear-gradient(90deg, #6a4c93, #d45079, #ff7b54, #fcbf49);
     }
 
-    /* Navbar - sticky at top */
     nav {
-      position: sticky;
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      padding: 1rem;
+      padding: 0.8rem;
       display: flex;
       justify-content: center;
       z-index: 1000;
@@ -35,7 +33,7 @@
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 1.5rem;
+      margin: 0 1.2rem;
       font-weight: 600;
       transition: opacity 0.3s;
     }
@@ -43,123 +41,108 @@
       opacity: 0.8;
     }
 
-    /* Header */
     header {
       color: white;
       text-align: center;
-      padding: 5rem 1rem 2rem;
-      margin-top: 0;
+      padding: 6rem 1rem 3rem;
+      margin-top: 2.8rem;
     }
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 2.8rem;
     }
     header p {
+      font-size: 1.2rem;
       margin-top: 0.5rem;
-      font-size: 1.1rem;
     }
 
-    /* Sections */
-    section {
-      padding: 2.5rem 1.5rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      color: #b23a48;
-      margin-bottom: 0.8rem;
+    .section-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3rem 1rem;
     }
 
-    /* Boxes (Mission + Partners) */
+    /* Adjust spacing between mission/story and partners */
+    .mission-story {
+      margin-bottom: 2rem; /* tighter spacing */
+    }
+
+    .partners-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 0; /* removed extra top spacing */
+    }
+
     .box {
-      background: white;
+      background-color: white;
+      padding: 2rem;
       border-radius: 12px;
-      margin-bottom: 1rem;
-      padding: 1.2rem 1.5rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    /* Partners grid */
-    .partners-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      margin-top: -1rem; /* slightly moved up */
-    }
-
-    /* Footer */
-    footer {
-      color: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
+      flex: 1 1 200px;
+      max-width: 250px;
     }
 
-    /* Add spacing to prevent content being hidden behind sticky navbar */
-    section:first-of-type {
-      margin-top: 2rem;
+    .start-chapter-btn {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      background: #d45079;
+      color: white;
+      padding: 1rem 1.5rem;
+      border: none;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      z-index: 1000;
+      text-decoration: none;
     }
+    .start-chapter-btn:hover {
+      opacity: 0.8;
+    }
+
   </style>
 </head>
 <body>
-
-  <!-- Navbar -->
   <nav class="gradient">
     <a href="index.html">Home</a>
     <a href="faq.html">FAQ</a>
     <a href="contact.html">Contact</a>
-    <a href="board.html">Meet the Board</a>
+    <a href="meet-the-board.html">Meet the Board</a>
   </nav>
 
-  <!-- Header -->
   <header class="gradient">
     <h1>Stitching Hope</h1>
-    <p>Connecting communities through crochet and kindness</p>
+    <p>Connecting communities through making and giving</p>
   </header>
 
-  <!-- Our Mission Section -->
-  <section>
+  <div class="section-container mission-story">
     <h2>Our Mission</h2>
-    <div class="box">
-      <p>Stitching Hope brings together volunteers and senior living communities to crochet items that provide warmth, comfort, and connection to those in need. Our mission is to foster intergenerational bonds and make a tangible difference in the lives of the unhoused and elderly.</p>
-    </div>
-  </section>
+    <p>Stitching Hope bridges communities by giving seniors a renewed sense of purpose through crafting, while providing essential items to the unhoused. Every stitch creates connection, meaning, and impact.</p>
 
-  <!-- Our Story Section -->
-  <section>
     <h2>Our Story</h2>
-    <div class="box">
-      <p>Stitching Hope began with a mix of frustration, compassion, and inspiration. While working as a medical assistant in geriatrics, Khushi often heard residents express how sad and isolated they felt, with no community, while also feeling as if their days lacked purpose and their hobbies were just ways to pass the time. At the same time, living in Philadelphia where there seemed to be a homeless person on every other street corner that needed help, she felt powerless walking past the unhoused community each day. She saw people struggle without even the basic necessities such as socks, gloves and more in the frigid cold that even she couldn’t bear for more than an hour even with those things, wishing she could do more.
-      <br><br>
-      The idea for the nonprofit began to take shape one holiday break while Khushi was helping her younger brother, Krish, clean out his room. Among the old clothes and toys they planned to donate, they stumbled upon piles of Krish’s crochet projects: years’ worth of hats, scarves, and trinkets he had created since fourth grade. There are only so many one family can use, but what felt like a surplus to them, they realized in that moment, could be life-changing for someone in need. Donating his projects sparked the thought that perhaps many others may have the same “problem,” which could actually become a solution. Remembering the senior citizens who also loved to knit and crochet, the vision formed.
-      <br><br>
-      From this vision, Stitching Hope was born: a bridge between communities. By giving seniors a renewed sense of meaning through making, while directly addressing the needs of the unhoused, Stitching Hope creates connection, purpose, and impact with every stitch.</p>
-    </div>
-  </section>
+    <p>Stitching Hope began with a mix of frustration, compassion, and inspiration. While working as a medical assistant in geriatrics, Khushi often heard residents express how sad and isolated they felt, with no community, while also feeling as if their days lacked purpose and their hobbies were just ways to pass the time. At the same time, living in Philadelphia where there seemed to be a homeless person on every other street corner that needed help, she felt powerless walking past the unhoused community each day. She saw people struggle without even the basic necessities such as socks, gloves and more in the frigid cold that even she couldn’t bare for more than an hour even with those things, wishing she could do more.
+    The idea for the nonprofit began to take shape one holiday break while Khushi was helping her younger brother, Krish, clean out his room. Among the old clothes and toys they planned to donate, they stumbled upon piles of Krish’s crochet projects: years’ worth of hats, scarves, and trinkets he had created since fourth grade. There are only so many one family can use, but what felt like a surplus to them, they realized in that moment, could be life-changing for someone in need. Donating his projects sparked the thought that perhaps many others may have the same “problem,” which could actually become a solution. Remembering the senior citizens who also loved to knit and crotchet, the vision formed.
+    From this vision, Stitching Hope was born: a bridge between communities. By giving seniors a renewed sense of meaning through making, while directly addressing the needs of the unhoused, Stitching Hope creates connection, purpose, and impact with every stitch.</p>
+  </div>
 
-  <!-- Our Partners Section -->
-  <section>
-    <h2>Our Partners</h2>
-    <div class="partners-grid">
-      <div class="box">Partner 1</div>
-      <div class="box">Partner 2</div>
-      <div class="box">Partner 3</div>
-      <div class="box">Partner 4</div>
-      <div class="box">Partner 5</div>
-      <div class="box">Partner 6</div>
-      <div class="box">Partner 7</div>
-      <div class="box">Partner 8</div>
-      <div class="box">Partner 9</div>
-      <div class="box">Partner 10</div>
-      <div class="box">Partner 11</div>
-      <div class="box">Partner 12</div>
-    </div>
-  </section>
+  <div class="section-container partners-container">
+    <div class="box">Partner 1</div>
+    <div class="box">Partner 2</div>
+    <div class="box">Partner 3</div>
+    <div class="box">Partner 4</div>
+    <div class="box">Partner 5</div>
+    <div class="box">Partner 6</div>
+    <div class="box">Partner 7</div>
+    <div class="box">Partner 8</div>
+    <div class="box">Partner 9</div>
+    <div class="box">Partner 10</div>
+    <div class="box">Partner 11</div>
+    <div class="box">Partner 12</div>
+  </div>
 
-  <!-- Footer -->
-  <footer class="gradient">
-    <p>Built with ❤️ by Stitching Hope</p>
-  </footer>
-
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLScwH5wASKWcrPu2acv8GhKCCmRY5cKZHHOlw7kgeMLpgIaTvg/viewform" class="start-chapter-btn">Start a Chapter</a>
 </body>
 </html>
