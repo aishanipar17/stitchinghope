@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Stitching Hope</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    /* --- Global Styles --- */
+    /* Global */
     body {
       font-family: 'Montserrat', sans-serif;
       margin: 0;
@@ -17,15 +17,18 @@
       scroll-behavior: smooth;
     }
 
-    h1, h2 {
-      font-family: 'Playfair Display', serif;
-    }
-
     .gradient {
       background: linear-gradient(120deg, #6a4c93, #d45079, #ff7b54, #fcbf49);
+      background-size: 300% 300%;
+      animation: gradientShift 12s ease infinite;
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
-    /* --- Navbar --- */
+    /* Navbar */
     nav {
       position: fixed;
       top: 0;
@@ -34,14 +37,15 @@
       padding: 1rem 2rem;
       display: flex;
       justify-content: center;
-      background: rgba(0,0,0,0.35);
-      backdrop-filter: blur(10px);
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(8px);
       z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
     }
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 1.5rem;
+      margin: 0 1.2rem;
       font-weight: 600;
       font-size: 0.95rem;
       transition: color 0.3s, transform 0.3s;
@@ -51,32 +55,25 @@
       transform: translateY(-2px);
     }
 
-    /* --- Header --- */
+    /* Header */
     header {
       color: white;
       text-align: center;
       padding: 7rem 1rem 4rem;
       margin-top: 3.2rem;
-      background-size: 300% 300%;
-      animation: gradientShift 12s ease infinite;
     }
     header h1 {
       margin: 0;
-      font-size: 3.2rem;
+      font-size: 3rem;
       letter-spacing: 1px;
     }
     header p {
-      font-size: 1.25rem;
-      margin-top: 0.8rem;
+      font-size: 1.2rem;
+      margin-top: 0.7rem;
       opacity: 0.9;
     }
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
 
-    /* --- Sections --- */
+    /* Sections */
     section {
       padding: 3.5rem 1.2rem;
       text-align: center;
@@ -87,12 +84,13 @@
       padding: 2.5rem;
       max-width: 950px;
       margin: 0 auto 3rem;
-      border-radius: 16px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease;
+      border-radius: 18px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .mission-container:hover, .story-container:hover {
       transform: translateY(-6px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.12);
     }
 
     .mission-container h2, .story-container h2 {
@@ -105,7 +103,7 @@
       color: #444;
     }
 
-    /* --- Partners --- */
+    /* Partners */
     .partners-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -125,10 +123,10 @@
     }
     .partner-box:hover {
       transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
     }
 
-    /* --- Responsive --- */
+    /* Responsive */
     @media (max-width: 768px) {
       header h1 {
         font-size: 2.2rem;
@@ -168,7 +166,7 @@
   </section>
 
   <section>
-    <h2 style="color:#d45079; font-family:'Playfair Display',serif; margin-bottom:1.5rem;">Our Partners</h2>
+    <h2 style="color:#d45079; margin-bottom:1.5rem;">Our Partners</h2>
     <div class="partners-container">
       <div class="partner-box">Ridge Oak Senior Housing</div>
       <div class="partner-box">Morristown Market Street Mission</div>
@@ -177,12 +175,13 @@
       <div class="partner-box">Basking Ridge Valley Brook Village</div>
       <div class="partner-box">Plainfield Shirlynn Home</div>
       <div class="partner-box">Bridgewater Visions and Pathways</div>
-      <div class="partner-box">Partner 8</div>
-      <div class="partner-box">Partner 9</div>
-      <div class="partner-box">Partner 10</div>
-      <div class="partner-box">Partner 11</div>
-      <div class="partner-box">Partner 12</div>
+      <div class="partner-box">Brandywine Senior Living</div>
+      <div class="partner-box">Soon to Come!</div>
+      <div class="partner-box">Soon to Come!</div>
+      <div class="partner-box">Soon to Come!</div>
+      <div class="partner-box">Soon to Come!</div>
     </div>
   </section>
 </body>
 </html>
+
