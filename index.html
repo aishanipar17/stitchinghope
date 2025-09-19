@@ -1,43 +1,143 @@
-<!-- Partners -->
-<section>
-  <h2>Our Partners</h2>
-  <div class="partners-container">
-    <div class="partner-box">Ridge Oak Senior Housing</div>
-    <div class="partner-box">Morristown Market Street Mission</div>
-    <div class="partner-box">Home First Family Services</div>
-    <div class="partner-box">Morristown Homeless Solutions</div>
-    <div class="partner-box">Basking Ridge Valley Brook Village</div>
-    <div class="partner-box">Plainfield Shirlynn Home</div>
-    <div class="partner-box">Bridgewater Visions and Pathways</div>
-    <div class="partner-box">Partner 8</div>
-    <div class="partner-box">Partner 9</div>
-    <div class="partner-box">Partner 10</div>
-    <div class="partner-box">Partner 11</div>
-    <div class="partner-box">Partner 12</div>
-  </div>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stitching Hope</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #fff8f0;
+      color: #333;
+      scroll-behavior: smooth;
+    }
 
-<style>
-  .partners-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
+    .gradient {
+      background: linear-gradient(90deg, #6a4c93, #d45079, #ff7b54, #fcbf49);
+    }
 
-  .partner-box {
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    font-weight: 600;
-  }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 0.8rem;
+      display: flex;
+      justify-content: center;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1.2rem;
+      font-weight: 600;
+      transition: opacity 0.3s;
+    }
+    nav a:hover {
+      opacity: 0.8;
+    }
 
-  .partner-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  }
-</style>
+    header {
+      color: white;
+      text-align: center;
+      padding: 6rem 1rem 3rem;
+      margin-top: 2.8rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    section {
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    .mission-container, .story-container {
+      background-color: white;
+      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .mission-container h2, .story-container h2 {
+      color: #b23a48;
+      margin-bottom: 1rem;
+    }
+
+    /* Partners Section */
+    .partners-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .partner-box {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      font-weight: 600;
+    }
+    .partner-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body>
+  <nav class="gradient">
+    <a href="./index.html">Home</a>
+    <a href="./faq.html">FAQ</a>
+    <a href="./contact.html">Contact</a>
+    <a href="./board.html">Meet the Board</a>
+  </nav>
+
+  <header class="gradient">
+    <h1>Stitching Hope</h1>
+    <p>Connecting communities through crochet and kindness</p>
+  </header>
+
+  <section class="mission-container">
+    <h2>Our Mission</h2>
+    <p>Our mission is to give seniors a renewed sense of purpose through crafting, while providing essential clothing items to the unhoused community. Stitching Hope bridges generations and communities with every stitch.</p>
+  </section>
+
+  <section class="story-container">
+    <h2>Our Story</h2>
+    <p>Stitching Hope began with a mix of frustration, compassion, and inspiration. While working as a medical assistant in geriatrics, Khushi often heard residents express their sadness and isolation. They felt a lack of community and purpose, as if their hobbies were just ways to pass the time. Simultaneously, living in Philadelphia where there seemed to be a homeless person on every other street corner, she felt powerless walking past the unhoused community each day. She saw people struggle without even basic necessities such as socks and gloves in the frigid cold, wishing she could do more. The idea for the nonprofit began to take shape one holiday break while Khushi was helping her younger brother, Krish, clean out his room. Among the old clothes and toys they planned to donate, they stumbled upon piles of Krish’s crochet projects: years worth of hats, scarves, and trinkets that had been accumulating since the fourth grade. There are only so many one family can use, but what felt like a surplus to them, they realized in that moment, could be life-changing for someone in need. Donating his projects sparked the thought that perhaps many others may have the same “problem,” which could actually become a solution for those in need. Remembering the senior citizens who also loved to knit and crochet, the vision formed. From this vision, Stitching Hope was born: a bridge between communities. By giving seniors a renewed sense of meaning through making, while directly addressing the needs of the unhoused, Stitching Hope creates connection, purpose, and impact with every stitch.</p>
+  </section>
+
+  <section>
+    <h2>Our Partners</h2>
+    <div class="partners-container">
+      <div class="partner-box">Ridge Oak Senior Housing</div>
+      <div class="partner-box">Morristown Market Street Mission</div>
+      <div class="partner-box">Home First Family Services</div>
+      <div class="partner-box">Morristown Homeless Solutions</div>
+      <div class="partner-box">Basking Ridge Valley Brook Village</div>
+      <div class="partner-box">Plainfield Shirlynn Home</div>
+      <div class="partner-box">Bridgewater Visions and Pathways</div>
+      <div class="partner-box">Princeton BrandyWine</div>
+      <div class="partner-box">Partner 9</div>
+      <div class="partner-box">Partner 10</div>
+      <div class="partner-box">Partner 11</div>
+      <div class="partner-box">Partner 12</div>
+    </div>
+  </section>
+</body>
+</html>
