@@ -166,22 +166,50 @@
     </p>
   </section>
 
-  <!-- Partners -->
-  <section>
-    <h2>Our Partners</h2>
-    <div class="partners-container">
-      <div class="partner-box">Ridge Oak Senior Housing</div>
-      <div class="partner-box">Morristown Market Street Mission</div>
-      <div class="partner-box">Home First Family Services</div>
-      <div class="partner-box">Morristown Homeless Solutions</div>
-      <div class="partner-box">Basking Ridge Valley Brook Village</div>
-      <div class="partner-box">Plainfield Shirlynn Home</div>
-      <div class="partner-box">Bridgewater Visions and Pathways</div>
-      <div class="partner-box">Coming Soon..</div>
-      <div class="partner-box">Coming Soon../div>
-      <div class="partner-box">Coming Soon..</div>
-      <div class="partner-box">Coming Soon..</div>
-      <div class="partner-box">Coming Soon..</div>
+ <!-- Partners -->
+<section>
+  <h2>Our Partners</h2>
+  <div class="partners-container">
+    <div class="partner-box">Ridge Oak Senior Housing</div>
+    <div class="partner-box">Morristown Market Street Mission</div>
+    <div class="partner-box">Home First Family Services</div>
+    <div class="partner-box">Morristown Homeless Solutions</div>
+    <div class="partner-box">Basking Ridge Valley Brook Village</div>
+    <div class="partner-box">Plainfield Shirlynn Home</div>
+    <div class="partner-box">Bridgewater Visions and Pathways</div>
+    <div class="partner-box">Partner 8</div>
+    <div class="partner-box">Partner 9</div>
+    <div class="partner-box">Partner 10</div>
+    <div class="partner-box">Partner 11</div>
+    <div class="partner-box">Partner 12</div>
+  </div>
+</section>
+
+<style>
+  .partners-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  .partner-box {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-weight: 600;
+  }
+
+  .partner-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+</style>
+
     </div>
   </section>
 </body>
