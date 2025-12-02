@@ -1,1 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapters | Stitching Hope</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #fff8f0;
+      color: #333;
+      scroll-behavior: smooth;
+    }
 
+    .gradient {
+      background: linear-gradient(90deg, #d45079, #ff7b54, #fcbf49);
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 0.8rem;
+      display: flex;
+      justify-content: center;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1.2rem;
+      font-weight: 600;
+      transition: opacity 0.3s;
+    }
+    nav a:hover {
+      opacity: 0.8;
+    }
+
+    header {
+      color: white;
+      text-align: center;
+      padding: 6rem 1rem 3rem;
+      margin-top: 2.8rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.6rem;
+    }
+
+    section {
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    .chapter-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .chapter-box {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      font-weight: 600;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .chapter-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .start-box {
+      max-width: 700px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .start-box a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #d45079;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: opacity 0.3s;
+    }
+    .start-box a:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <nav class="gradient">
+    <a href="./index.html">Home</a>
+    <a href="./faq.html">FAQ</a>
+    <a href="./contact.html">Contact</a>
+    <a href="./board.html">Meet the Board</a>
+    <a href="./chapters.html">Chapters</a>
+  </nav>
+
+  <header class="gradient">
+    <h1>Our Chapters</h1>
+  </header>
+
+  <section>
+    <h2>Where We Are</h2>
+    <div class="chapter-grid">
+      <div class="chapter-box">Basking Ridge, NJ</div>
+      <div class="chapter-box">Philadelphia, PA</div>
+      <div class="chapter-box">Plainsboro, NJ</div>
+      <div class="chapter-box">Raleigh, NC</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Start a Chapter</h2>
+    <div class="start-box">
+      <p>Want to bring Stitching Hope to your community? Fill out our interest form and we’ll reach out with next steps!</p>
+      <a href="#">Start a Chapter</a>
+    </div>
+  </section>
+</body>
+</html>
