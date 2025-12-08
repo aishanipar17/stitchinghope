@@ -115,14 +115,11 @@
       opacity: 0.8;
     }
 
-    /* Map styling */
     #map {
       height: 450px;
-      width: 90%;
-      max-width: 900px;
-      margin: 2rem auto;
+      width: 100%;
+      margin-top: 2rem;
       border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
   </style>
 </head>
@@ -147,9 +144,10 @@
       <div class="chapter-box">Philadelphia, PA</div>
       <div class="chapter-box">Plainsboro, NJ</div>
       <div class="chapter-box">Raleigh, NC</div>
+      <div class="chapter-box">New York City, NY</div>
       <div class="chapter-box">Mason, OH</div>
-      <div class="chapter-box">NYC, NY</div>
     </div>
+    <div id="map"></div>
   </section>
 
   <section class="start-box">
@@ -158,7 +156,6 @@
     <a href="#">Start a Chapter</a>
   </section>
 
-  <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
   <script>
     var map = L.map('map').setView([40.0, -75.0], 6);
@@ -169,12 +166,14 @@
       { name: "Basking Ridge, NJ", coords: [40.7062, -74.5493] },
       { name: "Plainsboro, NJ", coords: [40.3314, -74.5983] },
       { name: "Philadelphia, PA", coords: [39.9526, -75.1652] },
+      { name: "Raleigh, NC", coords: [35.7796, -78.6382] },
       { name: "New York City, NY", coords: [40.7128, -74.0060] },
-      { name: "Mason, OH", coords: [39.3601, -84.3099] },
-      { name: "Raleigh, NC", coords: [35.7796, -78.6382] }
+      { name: "Mason, OH", coords: [39.3601, -84.3099] }
     ];
 
     chapters.forEach(chapter => {
       L.marker(chapter.coords).addTo(map).bindPopup("<b>" + chapter.name + "</b>");
     });
   </script>
+</body>
+</html>
