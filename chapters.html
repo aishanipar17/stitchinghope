@@ -2,119 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chapters | Stitching Hope</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stitching Hope Chapters</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"/>
+
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
       margin: 0;
       padding: 0;
-      line-height: 1.6;
       background-color: #fff8f0;
       color: #333;
       scroll-behavior: smooth;
     }
 
-    .gradient {
-      background: linear-gradient(90deg, #d45079, #ff7b54, #fcbf49);
-    }
-
+    .gradient { background: linear-gradient(90deg, #d45079, #ff7b54, #fcbf49); }
     nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 0.8rem;
-      display: flex;
-      justify-content: center;
-      z-index: 1000;
+      position: fixed; top:0; left:0; width:100%; padding:0.8rem; display:flex; justify-content:center; z-index:1000;
     }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 1.2rem;
-      font-weight: 600;
-      transition: opacity 0.3s;
-    }
-    nav a:hover {
-      opacity: 0.8;
-    }
+    nav a { color:white; text-decoration:none; margin:0 1.2rem; font-weight:600; transition: opacity 0.3s; }
+    nav a:hover { opacity:0.8; }
 
-    header {
-      color: white;
-      text-align: center;
-      padding: 6rem 1rem 3rem;
-      margin-top: 2.8rem;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.8rem;
-    }
+    header { color:white; text-align:center; padding:6rem 1rem 3rem; margin-top:2.8rem; }
+    header h1 { margin:0; font-size:2.8rem; }
+    header p { font-size:1.2rem; margin-top:0.5rem; }
 
-    section {
-      padding: 3rem 1rem;
-      text-align: center;
-    }
+    section { padding:3rem 1rem; text-align:center; }
+    .section-title { color:#b23a48; margin-bottom:1rem; }
 
+    /* Leaflet map */
+    #map { height: 450px; width: 90%; max-width:900px; margin:2rem auto; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15); }
+
+    /* Chapter boxes */
     .chapter-container {
-      background-color: white;
-      padding: 2rem;
-      max-width: 900px;
-      margin: 0 auto 2rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    .chapter-container h2 {
-      color: #b23a48;
-      margin-bottom: 1rem;
-    }
-
-    .chapter-grid {
-      display: grid;
+      display:grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1rem;
+      gap:1.5rem;
+      max-width:900px;
+      margin:2rem auto;
     }
-
     .chapter-box {
-      background-color: white;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      font-weight: 600;
-      transition: transform 0.3s, box-shadow 0.3s;
+      background:white; padding:1.5rem; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.1);
+      font-weight:600; transition: transform 0.3s, box-shadow 0.3s;
+      text-decoration:none; color:#333;
     }
-    .chapter-box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-
-    .start-box {
-      max-width: 700px;
-      margin: 2rem auto;
-      background-color: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .start-box a {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.8rem 1.5rem;
-      background-color: #d45079;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: opacity 0.3s;
-    }
-    .start-box a:hover {
-      opacity: 0.8;
-    }
+    .chapter-box:hover { transform:translateY(-5px); box-shadow:0 4px 12px rgba(0,0,0,0.15); }
   </style>
 </head>
+
 <body>
   <nav class="gradient">
     <a href="./index.html">Home</a>
@@ -126,25 +64,45 @@
 
   <header class="gradient">
     <h1>Our Chapters</h1>
-    <p>Connecting communities through Stitching Hope</p>
+    <p>Connecting communities through crochet and kindness</p>
   </header>
 
-  <section class="chapter-container">
-    <h2>Where We Are</h2>
-    <div class="chapter-grid">
-      <div class="chapter-box">Basking Ridge, NJ</div>
-      <div class="chapter-box">Philadelphia, PA</div>
-      <div class="chapter-box">Plainsboro, NJ</div>
-      <div class="chapter-box">Raleigh, NC</div>
-      <div class="chapter-box">Mason, OH</div>
-      <div class="chapter-box">NYC, NY</div>
+  <section>
+    <h2 class="section-title">Where We Are</h2>
+    <div id="map"></div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Chapters</h2>
+    <div class="chapter-container">
+      <a class="chapter-box" href="#">Basking Ridge, NJ</a>
+      <a class="chapter-box" href="#">Plainsboro, NJ</a>
+      <a class="chapter-box" href="#">Philadelphia, PA</a>
+      <a class="chapter-box" href="#">New York City, NY</a>
+      <a class="chapter-box" href="#">Mason, OH</a>
+      <a class="chapter-box" href="#">Raleigh, NC</a>
     </div>
   </section>
 
-  <section class="start-box">
-    <h2>Start a Chapter</h2>
-    <p>Want to bring Stitching Hope to your community? Fill out our interest form and we’ll reach out with next steps!</p>
-    <a href="#">Start a Chapter</a>
-  </section>
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script>
+    var map = L.map('map').setView([40.0, -75.0], 6);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);
+
+    var chapters = [
+      { name: "Basking Ridge, NJ", coords: [40.7062, -74.5493] },
+      { name: "Plainsboro, NJ", coords: [40.3314, -74.5983] },
+      { name: "Philadelphia, PA", coords: [39.9526, -75.1652] },
+      { name: "New York City, NY", coords: [40.7128, -74.0060] },
+      { name: "Mason, OH", coords: [39.3601, -84.3099] },
+      { name: "Raleigh, NC", coords: [35.7796, -78.6382] }
+    ];
+
+    chapters.forEach(chapter => {
+      L.marker(chapter.coords).addTo(map).bindPopup("<b>" + chapter.name + "</b>");
+    });
+  </script>
 </body>
 </html>
