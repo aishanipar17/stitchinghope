@@ -2,61 +2,128 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stitching Hope Chapters</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapters | Stitching Hope</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"/>
-
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
       margin: 0;
       padding: 0;
+      line-height: 1.6;
       background-color: #fff8f0;
       color: #333;
       scroll-behavior: smooth;
     }
 
-    .gradient { background: linear-gradient(90deg, #d45079, #ff7b54, #fcbf49); }
+    .gradient {
+      background: linear-gradient(90deg, #d45079, #ff7b54, #fcbf49);
+    }
+
     nav {
-      position: fixed; top:0; left:0; width:100%; padding:0.8rem; display:flex; justify-content:center; z-index:1000;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 0.8rem;
+      display: flex;
+      justify-content: center;
+      z-index: 1000;
     }
-    nav a { color:white; text-decoration:none; margin:0 1.2rem; font-weight:600; transition: opacity 0.3s; }
-    nav a:hover { opacity:0.8; }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1.2rem;
+      font-weight: 600;
+      transition: opacity 0.3s;
+    }
+    nav a:hover {
+      opacity: 0.8;
+    }
 
-    header { color:white; text-align:center; padding:6rem 1rem 3rem; margin-top:2.8rem; }
-    header h1 { margin:0; font-size:2.8rem; }
-    header p { font-size:1.2rem; margin-top:0.5rem; }
+    header {
+      color: white;
+      text-align: center;
+      padding: 6rem 1rem 3rem;
+      margin-top: 2.8rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+    }
 
-    section { padding:3rem 1rem; text-align:center; }
-    .section-title { color:#b23a48; margin-bottom:1rem; }
+    section {
+      padding: 3rem 1rem;
+      text-align: center;
+    }
 
-    /* Chapter boxes */
     .chapter-container {
-      display:grid;
+      background-color: white;
+      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .chapter-container h2 {
+      color: #b23a48;
+      margin-bottom: 1rem;
+    }
+
+    .chapter-grid {
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap:1.5rem;
-      max-width:900px;
-      margin:2rem auto;
+      gap: 1.5rem;
+      margin-top: 1rem;
     }
+
     .chapter-box {
-      background:white; padding:1.5rem; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.1);
-      font-weight:600; transition: transform 0.3s, box-shadow 0.3s;
-      text-decoration:none; color:#333;
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      font-weight: 600;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
-    .chapter-box:hover { transform:translateY(-5px); box-shadow:0 4px 12px rgba(0,0,0,0.15); }
-
-    /* Map */
-    #map { height: 450px; width: 90%; max-width:900px; margin:2rem auto; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15); }
-
-    /* Start chapter button */
-    .start-chapter-btn {
-      background:#b23a48; color:white; padding:0.8rem 1.5rem; border-radius:8px; font-weight:600;
-      text-decoration:none; transition:opacity 0.3s;
+    .chapter-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
-    .start-chapter-btn:hover { opacity:0.85; }
+
+    .start-box {
+      max-width: 700px;
+      margin: 2rem auto;
+      background-color: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .start-box a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #d45079;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: opacity 0.3s;
+    }
+    .start-box a:hover {
+      opacity: 0.8;
+    }
+
+    /* Map styling */
+    #map {
+      height: 450px;
+      width: 90%;
+      max-width: 900px;
+      margin: 2rem auto;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
   </style>
 </head>
 <body>
@@ -70,29 +137,28 @@
 
   <header class="gradient">
     <h1>Our Chapters</h1>
-    <p>Connecting communities through crochet and kindness</p>
+    <p>Connecting communities through Stitching Hope</p>
   </header>
 
-  <!-- Chapter Boxes Section -->
-  <section>
-    <h2 class="section-title">Chapters</h2>
-    <div class="chapter-container">
-      <a class="chapter-box" href="#">Basking Ridge, NJ</a>
-      <a class="chapter-box" href="#">Plainsboro, NJ</a>
-      <a class="chapter-box" href="#">Philadelphia, PA</a>
-      <a class="chapter-box" href="#">New York City, NY</a>
-      <a class="chapter-box" href="#">Mason, OH</a>
-      <a class="chapter-box" href="#">Raleigh, NC</a>
+  <section class="chapter-container">
+    <h2>Where We Are</h2>
+    <div class="chapter-grid">
+      <div class="chapter-box">Basking Ridge, NJ</div>
+      <div class="chapter-box">Philadelphia, PA</div>
+      <div class="chapter-box">Plainsboro, NJ</div>
+      <div class="chapter-box">Raleigh, NC</div>
     </div>
+  </section>
 
-    <div style="margin-top:2rem; text-align:center;">
-      <a class="start-chapter-btn" href="./start-chapter.html">Want to Start a Chapter?</a>
-    </div>
+  <section class="start-box">
+    <h2>Start a Chapter</h2>
+    <p>Want to bring Stitching Hope to your community? Fill out our interest form and we’ll reach out with next steps!</p>
+    <a href="#">Start a Chapter</a>
   </section>
 
   <!-- Map Section -->
   <section>
-    <h2 class="section-title">Where We Are</h2>
+    <h2 class="chapter-container">Interactive Map of Our Chapters</h2>
     <div id="map"></div>
   </section>
 
@@ -116,5 +182,3 @@
       L.marker(chapter.coords).addTo(map).bindPopup("<b>" + chapter.name + "</b>");
     });
   </script>
-</body>
-</html>
